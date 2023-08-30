@@ -1,0 +1,1505 @@
+2023-08-14 16:28:29,408 p=13388 u=root n=ansible | PLAY [website] *****************************************************************
+2023-08-14 16:28:29,417 p=13388 u=root n=ansible | TASK [Fetch the latest code from the repository] *******************************
+2023-08-14 16:28:30,834 p=13388 u=root n=ansible | changed: [10.71.71.111]
+2023-08-14 16:28:30,837 p=13388 u=root n=ansible | TASK [Include the sensitive variables] *****************************************
+2023-08-14 16:28:30,849 p=13388 u=root n=ansible | fatal: [10.71.71.111]: FAILED! => {"ansible_facts": {}, "ansible_included_var_files": [], "changed": false, "message": "Attempting to decrypt but no vault secrets found"}
+2023-08-14 16:28:30,852 p=13388 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-14 16:28:30,852 p=13388 u=root n=ansible | 10.71.71.111               : ok=1    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-14 16:30:10,868 p=13418 u=root n=ansible | PLAY [website] *****************************************************************
+2023-08-14 16:30:10,877 p=13418 u=root n=ansible | TASK [Fetch the latest code from the repository] *******************************
+2023-08-14 16:30:12,256 p=13418 u=root n=ansible | changed: [10.71.71.111]
+2023-08-14 16:30:12,259 p=13418 u=root n=ansible | TASK [Include the sensitive variables] *****************************************
+2023-08-14 16:30:12,273 p=13418 u=root n=ansible | fatal: [10.71.71.111]: FAILED! => {"ansible_facts": {}, "ansible_included_var_files": [], "changed": false, "message": "Attempting to decrypt but no vault secrets found"}
+2023-08-14 16:30:12,275 p=13418 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-14 16:30:12,275 p=13418 u=root n=ansible | 10.71.71.111               : ok=1    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-16 17:39:41,515 p=15119 u=root n=ansible | [WARNING]: Unable to parse /root/inventory.ini as an inventory source
+
+2023-08-16 17:39:41,516 p=15119 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-08-16 17:39:41,935 p=15119 u=root n=ansible | localhost | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-16 17:42:10,885 p=15155 u=root n=ansible | PLAY [Update Servers] **********************************************************************************************************************************************
+2023-08-16 17:42:10,892 p=15155 u=root n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************
+2023-08-16 17:42:11,072 p=15155 u=root n=ansible | fatal: [10.71.71.115]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: \nroot@10.71.71.115: Permission denied (publickey,password).", "unreachable": true}
+2023-08-16 17:42:12,637 p=15155 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 17:42:12,700 p=15155 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter
+could change the meaning of that path. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information.
+
+2023-08-16 17:42:12,701 p=15155 u=root n=ansible | ok: [10.71.71.134]
+2023-08-16 17:42:12,719 p=15155 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 17:42:12,994 p=15155 u=root n=ansible | ok: [10.71.71.168]
+2023-08-16 17:42:13,006 p=15155 u=root n=ansible | TASK [Gather facts] ************************************************************************************************************************************************
+2023-08-16 17:42:14,289 p=15155 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 17:42:14,314 p=15155 u=root n=ansible | ok: [10.71.71.134]
+2023-08-16 17:42:14,329 p=15155 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 17:42:14,486 p=15155 u=root n=ansible | ok: [10.71.71.168]
+2023-08-16 17:42:14,492 p=15155 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************************************************************************************************
+2023-08-16 17:42:14,637 p=15155 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-16 17:42:15,180 p=15155 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type string). If this does not look like what you expect, quote the entire value to ensure it
+does not change.
+
+2023-08-16 17:42:15,180 p=15155 u=root n=ansible | fatal: [10.71.71.111]: FAILED! => {"changed": false, "msg": "python3-apt must be installed to use check mode. If run normally this module can auto-install it."}
+2023-08-16 17:42:17,780 p=15155 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 17:42:20,066 p=15155 u=root n=ansible | changed: [10.71.71.168]
+2023-08-16 17:42:20,073 p=15155 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************************************************************************************************
+2023-08-16 17:42:20,151 p=15155 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-16 17:42:20,159 p=15155 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-16 17:42:20,507 p=15155 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-16 17:42:20,522 p=15155 u=root n=ansible | PLAY RECAP *********************************************************************************************************************************************************
+2023-08-16 17:42:20,523 p=15155 u=root n=ansible | 10.71.71.111               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-16 17:42:20,523 p=15155 u=root n=ansible | 10.71.71.115               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-16 17:42:20,523 p=15155 u=root n=ansible | 10.71.71.134               : ok=2    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2023-08-16 17:42:20,523 p=15155 u=root n=ansible | 10.71.71.168               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-16 17:42:20,523 p=15155 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-16 17:42:35,808 p=15296 u=root n=ansible | PLAY [Update Servers] **********************************************************************************************************************************************
+2023-08-16 17:42:35,815 p=15296 u=root n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************
+2023-08-16 17:42:36,002 p=15296 u=root n=ansible | fatal: [10.71.71.115]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: \nroot@10.71.71.115: Permission denied (publickey,password).", "unreachable": true}
+2023-08-16 17:42:37,198 p=15296 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 17:42:37,220 p=15296 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter
+could change the meaning of that path. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information.
+
+2023-08-16 17:42:37,220 p=15296 u=root n=ansible | ok: [10.71.71.134]
+2023-08-16 17:42:37,312 p=15296 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 17:42:37,582 p=15296 u=root n=ansible | ok: [10.71.71.168]
+2023-08-16 17:42:37,594 p=15296 u=root n=ansible | TASK [Gather facts] ************************************************************************************************************************************************
+2023-08-16 17:42:38,874 p=15296 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 17:42:38,902 p=15296 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 17:42:38,906 p=15296 u=root n=ansible | ok: [10.71.71.134]
+2023-08-16 17:42:39,066 p=15296 u=root n=ansible | ok: [10.71.71.168]
+2023-08-16 17:42:39,072 p=15296 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************************************************************************************************
+2023-08-16 17:42:39,232 p=15296 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-16 17:42:39,754 p=15296 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type string). If this does not look like what you expect, quote the entire value to ensure it
+does not change.
+
+2023-08-16 17:42:39,754 p=15296 u=root n=ansible | fatal: [10.71.71.111]: FAILED! => {"changed": false, "msg": "python3-apt must be installed to use check mode. If run normally this module can auto-install it."}
+2023-08-16 17:42:41,303 p=15296 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 17:42:41,585 p=15296 u=root n=ansible | changed: [10.71.71.168]
+2023-08-16 17:42:41,592 p=15296 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************************************************************************************************
+2023-08-16 17:42:41,675 p=15296 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-16 17:42:41,684 p=15296 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-16 17:42:42,060 p=15296 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-16 17:42:42,077 p=15296 u=root n=ansible | PLAY RECAP *********************************************************************************************************************************************************
+2023-08-16 17:42:42,077 p=15296 u=root n=ansible | 10.71.71.111               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-16 17:42:42,077 p=15296 u=root n=ansible | 10.71.71.115               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-16 17:42:42,077 p=15296 u=root n=ansible | 10.71.71.134               : ok=2    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2023-08-16 17:42:42,077 p=15296 u=root n=ansible | 10.71.71.168               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-16 17:42:42,077 p=15296 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-16 17:45:50,669 p=15428 u=root n=ansible | PLAY [Update Servers] **********************************************************************************************************************************************
+2023-08-16 17:45:50,676 p=15428 u=root n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************
+2023-08-16 17:45:50,855 p=15428 u=root n=ansible | fatal: [10.71.71.115]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: \nroot@10.71.71.115: Permission denied (publickey,password).", "unreachable": true}
+2023-08-16 17:45:52,315 p=15428 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 17:45:52,352 p=15428 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 17:45:52,358 p=15428 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter
+could change the meaning of that path. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information.
+
+2023-08-16 17:45:52,358 p=15428 u=root n=ansible | ok: [10.71.71.134]
+2023-08-16 17:45:52,475 p=15428 u=root n=ansible | ok: [10.71.71.168]
+2023-08-16 17:45:52,487 p=15428 u=root n=ansible | TASK [Gather facts] ************************************************************************************************************************************************
+2023-08-16 17:45:53,774 p=15428 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 17:45:53,803 p=15428 u=root n=ansible | ok: [10.71.71.134]
+2023-08-16 17:45:53,812 p=15428 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 17:45:53,953 p=15428 u=root n=ansible | ok: [10.71.71.168]
+2023-08-16 17:45:53,961 p=15428 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************************************************************************************************
+2023-08-16 17:45:54,118 p=15428 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-16 17:45:54,653 p=15428 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type string). If this does not look like what you expect, quote the entire value to ensure it
+does not change.
+
+2023-08-16 17:45:54,653 p=15428 u=root n=ansible | fatal: [10.71.71.111]: FAILED! => {"changed": false, "msg": "python3-apt must be installed to use check mode. If run normally this module can auto-install it."}
+2023-08-16 17:45:56,915 p=15428 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 17:45:57,160 p=15428 u=root n=ansible | changed: [10.71.71.168]
+2023-08-16 17:45:57,167 p=15428 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************************************************************************************************
+2023-08-16 17:45:57,236 p=15428 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-16 17:45:57,263 p=15428 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-16 17:45:57,611 p=15428 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-16 17:45:57,626 p=15428 u=root n=ansible | PLAY RECAP *********************************************************************************************************************************************************
+2023-08-16 17:45:57,626 p=15428 u=root n=ansible | 10.71.71.111               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-16 17:45:57,626 p=15428 u=root n=ansible | 10.71.71.115               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-16 17:45:57,626 p=15428 u=root n=ansible | 10.71.71.134               : ok=2    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2023-08-16 17:45:57,627 p=15428 u=root n=ansible | 10.71.71.168               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-16 17:45:57,627 p=15428 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-16 17:47:31,459 p=15571 u=root n=ansible | PLAY [Update Servers] **********************************************************************************************************************************************
+2023-08-16 17:47:31,466 p=15571 u=root n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************
+2023-08-16 17:47:31,632 p=15571 u=root n=ansible | fatal: [10.71.71.115]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: \nroot@10.71.71.115: Permission denied (publickey,password).", "unreachable": true}
+2023-08-16 17:47:33,157 p=15571 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 17:47:33,165 p=15571 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 17:47:33,172 p=15571 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter
+could change the meaning of that path. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information.
+
+2023-08-16 17:47:33,173 p=15571 u=root n=ansible | ok: [10.71.71.134]
+2023-08-16 17:47:33,228 p=15571 u=root n=ansible | ok: [10.71.71.168]
+2023-08-16 17:47:33,244 p=15571 u=root n=ansible | TASK [Gather facts] ************************************************************************************************************************************************
+2023-08-16 17:47:34,530 p=15571 u=root n=ansible | ok: [10.71.71.134]
+2023-08-16 17:47:34,535 p=15571 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 17:47:34,540 p=15571 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 17:47:34,619 p=15571 u=root n=ansible | ok: [10.71.71.168]
+2023-08-16 17:47:34,625 p=15571 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************************************************************************************************
+2023-08-16 17:47:34,778 p=15571 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-16 17:47:35,328 p=15571 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type string). If this does not look like what you expect, quote the entire value to ensure it
+does not change.
+
+2023-08-16 17:47:35,329 p=15571 u=root n=ansible | fatal: [10.71.71.111]: FAILED! => {"changed": false, "msg": "python3-apt must be installed to use check mode. If run normally this module can auto-install it."}
+2023-08-16 17:47:36,896 p=15571 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 17:47:37,099 p=15571 u=root n=ansible | changed: [10.71.71.168]
+2023-08-16 17:47:37,105 p=15571 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************************************************************************************************
+2023-08-16 17:47:37,186 p=15571 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-16 17:47:37,195 p=15571 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-16 17:47:37,548 p=15571 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-16 17:47:37,564 p=15571 u=root n=ansible | PLAY RECAP *********************************************************************************************************************************************************
+2023-08-16 17:47:37,564 p=15571 u=root n=ansible | 10.71.71.111               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-16 17:47:37,564 p=15571 u=root n=ansible | 10.71.71.115               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-16 17:47:37,564 p=15571 u=root n=ansible | 10.71.71.134               : ok=2    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2023-08-16 17:47:37,564 p=15571 u=root n=ansible | 10.71.71.168               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-16 17:47:37,565 p=15571 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-16 18:01:07,097 p=15726 u=root n=ansible | PLAY [Update Servers] **********************************************************************************************************************************************
+2023-08-16 18:01:07,104 p=15726 u=root n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************
+2023-08-16 18:01:08,848 p=15726 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter
+could change the meaning of that path. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information.
+
+2023-08-16 18:01:08,849 p=15726 u=root n=ansible | ok: [10.71.71.134]
+2023-08-16 18:01:08,900 p=15726 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 18:01:08,902 p=15726 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 18:01:08,946 p=15726 u=root n=ansible | ok: [10.71.71.115]
+2023-08-16 18:01:08,981 p=15726 u=root n=ansible | ok: [10.71.71.168]
+2023-08-16 18:01:08,993 p=15726 u=root n=ansible | TASK [Gather facts] ************************************************************************************************************************************************
+2023-08-16 18:01:10,361 p=15726 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 18:01:10,393 p=15726 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 18:01:10,412 p=15726 u=root n=ansible | ok: [10.71.71.134]
+2023-08-16 18:01:10,417 p=15726 u=root n=ansible | ok: [10.71.71.115]
+2023-08-16 18:01:10,494 p=15726 u=root n=ansible | ok: [10.71.71.168]
+2023-08-16 18:01:10,500 p=15726 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************************************************************************************************
+2023-08-16 18:01:10,732 p=15726 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-16 18:01:11,323 p=15726 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type string). If this does not look like what you expect, quote the entire value to ensure it
+does not change.
+
+2023-08-16 18:01:11,323 p=15726 u=root n=ansible | fatal: [10.71.71.111]: FAILED! => {"changed": false, "msg": "python3-apt must be installed to use check mode. If run normally this module can auto-install it."}
+2023-08-16 18:01:11,355 p=15726 u=root n=ansible | fatal: [10.71.71.115]: FAILED! => {"changed": false, "msg": "python3-apt must be installed to use check mode. If run normally this module can auto-install it."}
+2023-08-16 18:01:12,805 p=15726 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 18:01:13,844 p=15726 u=root n=ansible | changed: [10.71.71.168]
+2023-08-16 18:01:13,850 p=15726 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************************************************************************************************
+2023-08-16 18:01:13,937 p=15726 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-16 18:01:13,946 p=15726 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-16 18:01:14,296 p=15726 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-16 18:01:14,311 p=15726 u=root n=ansible | PLAY RECAP *********************************************************************************************************************************************************
+2023-08-16 18:01:14,312 p=15726 u=root n=ansible | 10.71.71.111               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-16 18:01:14,312 p=15726 u=root n=ansible | 10.71.71.115               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-16 18:01:14,312 p=15726 u=root n=ansible | 10.71.71.134               : ok=2    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2023-08-16 18:01:14,312 p=15726 u=root n=ansible | 10.71.71.168               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-16 18:01:14,312 p=15726 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-16 18:01:21,106 p=15896 u=root n=ansible | PLAY [Update Servers] **********************************************************************************************************************************************
+2023-08-16 18:01:21,112 p=15896 u=root n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************
+2023-08-16 18:01:22,477 p=15896 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter
+could change the meaning of that path. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information.
+
+2023-08-16 18:01:22,477 p=15896 u=root n=ansible | ok: [10.71.71.134]
+2023-08-16 18:01:22,668 p=15896 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 18:01:22,719 p=15896 u=root n=ansible | ok: [10.71.71.115]
+2023-08-16 18:01:22,726 p=15896 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 18:01:22,765 p=15896 u=root n=ansible | ok: [10.71.71.168]
+2023-08-16 18:01:22,779 p=15896 u=root n=ansible | TASK [Gather facts] ************************************************************************************************************************************************
+2023-08-16 18:01:24,184 p=15896 u=root n=ansible | ok: [10.71.71.134]
+2023-08-16 18:01:24,189 p=15896 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 18:01:24,239 p=15896 u=root n=ansible | ok: [10.71.71.115]
+2023-08-16 18:01:24,248 p=15896 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 18:01:24,323 p=15896 u=root n=ansible | ok: [10.71.71.168]
+2023-08-16 18:01:24,330 p=15896 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************************************************************************************************
+2023-08-16 18:01:24,557 p=15896 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-16 18:01:26,972 p=15896 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type string). If this does not look like what you expect, quote the entire value to ensure it
+does not change.
+
+2023-08-16 18:01:26,973 p=15896 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 18:01:53,573 p=15896 u=root n=ansible | changed: [10.71.71.168]
+2023-08-16 18:02:19,943 p=15896 u=root n=ansible | [WARNING]: Updating cache and auto-installing missing dependency: python3-apt
+
+2023-08-16 18:02:19,943 p=15896 u=root n=ansible | changed: [10.71.71.115]
+2023-08-16 18:02:40,276 p=15896 u=root n=ansible | changed: [10.71.71.111]
+2023-08-16 18:02:40,282 p=15896 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************************************************************************************************
+2023-08-16 18:02:40,399 p=15896 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-16 18:02:40,413 p=15896 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-16 18:02:40,419 p=15896 u=root n=ansible | skipping: [10.71.71.111]
+2023-08-16 18:02:40,438 p=15896 u=root n=ansible | skipping: [10.71.71.115]
+2023-08-16 18:02:41,818 p=15896 u=root n=ansible | changed: [10.71.71.134]
+2023-08-16 18:02:41,834 p=15896 u=root n=ansible | PLAY RECAP *********************************************************************************************************************************************************
+2023-08-16 18:02:41,834 p=15896 u=root n=ansible | 10.71.71.111               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-16 18:02:41,834 p=15896 u=root n=ansible | 10.71.71.115               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-16 18:02:41,834 p=15896 u=root n=ansible | 10.71.71.134               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-16 18:02:41,834 p=15896 u=root n=ansible | 10.71.71.168               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-16 18:02:41,834 p=15896 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-16 18:06:04,537 p=16069 u=root n=ansible | PLAY [website] *****************************************************************************************************************************************************
+2023-08-16 18:06:04,545 p=16069 u=root n=ansible | TASK [Fetch the latest code from the repository] *******************************************************************************************************************
+2023-08-16 18:06:06,081 p=16069 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 18:06:06,087 p=16069 u=root n=ansible | TASK [Include the sensitive variables] *****************************************************************************************************************************
+2023-08-16 18:06:06,098 p=16069 u=root n=ansible | fatal: [10.71.71.111]: FAILED! => {"ansible_facts": {}, "ansible_included_var_files": [], "changed": false, "message": "Attempting to decrypt but no vault secrets found"}
+2023-08-16 18:06:06,100 p=16069 u=root n=ansible | PLAY RECAP *********************************************************************************************************************************************************
+2023-08-16 18:06:06,100 p=16069 u=root n=ansible | 10.71.71.111               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-16 18:10:32,818 p=16094 u=root n=ansible | Decryption successful
+2023-08-16 18:10:45,569 p=16096 u=root n=ansible | PLAY [website] *****************************************************************************************************************************************************
+2023-08-16 18:10:45,577 p=16096 u=root n=ansible | TASK [Fetch the latest code from the repository] *******************************************************************************************************************
+2023-08-16 18:10:46,918 p=16096 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 18:10:46,921 p=16096 u=root n=ansible | TASK [Include the sensitive variables] *****************************************************************************************************************************
+2023-08-16 18:10:46,934 p=16096 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 18:10:46,940 p=16096 u=root n=ansible | TASK [Create .env file from template] ******************************************************************************************************************************
+2023-08-16 18:10:47,640 p=16096 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 18:10:47,643 p=16096 u=root n=ansible | TASK [Install any new dependencies] ********************************************************************************************************************************
+2023-08-16 18:10:49,018 p=16096 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 18:10:49,021 p=16096 u=root n=ansible | TASK [Restart the Node.js application (using systemctl)] ***********************************************************************************************************
+2023-08-16 18:10:49,666 p=16096 u=root n=ansible | changed: [10.71.71.111]
+2023-08-16 18:10:49,674 p=16096 u=root n=ansible | PLAY RECAP *********************************************************************************************************************************************************
+2023-08-16 18:10:49,674 p=16096 u=root n=ansible | 10.71.71.111               : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-16 18:15:00,491 p=16148 u=root n=ansible | PLAY [website] *****************************************************************************************************************************************************
+2023-08-16 18:15:00,499 p=16148 u=root n=ansible | TASK [Fetch the latest code from the repository] *******************************************************************************************************************
+2023-08-16 18:15:01,866 p=16148 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 18:15:01,869 p=16148 u=root n=ansible | TASK [Include the sensitive variables] *****************************************************************************************************************************
+2023-08-16 18:15:01,882 p=16148 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 18:15:01,886 p=16148 u=root n=ansible | TASK [Create .env file from template] ******************************************************************************************************************************
+2023-08-16 18:15:02,592 p=16148 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 18:15:02,595 p=16148 u=root n=ansible | TASK [Install any new dependencies] ********************************************************************************************************************************
+2023-08-16 18:15:03,564 p=16148 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 18:15:03,567 p=16148 u=root n=ansible | TASK [Restart the Node.js application (using systemctl)] ***********************************************************************************************************
+2023-08-16 18:15:04,147 p=16148 u=root n=ansible | changed: [10.71.71.111]
+2023-08-16 18:15:04,156 p=16148 u=root n=ansible | PLAY RECAP *********************************************************************************************************************************************************
+2023-08-16 18:15:04,156 p=16148 u=root n=ansible | 10.71.71.111               : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-16 18:16:26,553 p=16200 u=root n=ansible | PLAY [website] *****************************************************************************************************************************************************
+2023-08-16 18:16:26,564 p=16200 u=root n=ansible | TASK [Fetch the latest code from the repository] *******************************************************************************************************************
+2023-08-16 18:16:27,978 p=16200 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 18:16:27,981 p=16200 u=root n=ansible | TASK [Install any new dependencies] ********************************************************************************************************************************
+2023-08-16 18:16:28,913 p=16200 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 18:16:28,916 p=16200 u=root n=ansible | TASK [Restart the Node.js application (using systemctl)] ***********************************************************************************************************
+2023-08-16 18:16:29,502 p=16200 u=root n=ansible | changed: [10.71.71.111]
+2023-08-16 18:16:29,510 p=16200 u=root n=ansible | PLAY RECAP *********************************************************************************************************************************************************
+2023-08-16 18:16:29,510 p=16200 u=root n=ansible | 10.71.71.111               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-16 18:17:16,562 p=16240 u=root n=ansible | Encryption successful
+2023-08-16 19:01:01,988 p=16730 u=root n=ansible | PLAY [Update Servers] **********************************************************
+2023-08-16 19:01:01,994 p=16730 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-16 19:01:03,727 p=16730 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 19:01:03,750 p=16730 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2023-08-16 19:01:03,750 p=16730 u=root n=ansible | ok: [10.71.71.134]
+2023-08-16 19:01:03,761 p=16730 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 19:01:03,791 p=16730 u=root n=ansible | ok: [10.71.71.115]
+2023-08-16 19:01:04,046 p=16730 u=root n=ansible | ok: [10.71.71.168]
+2023-08-16 19:01:04,058 p=16730 u=root n=ansible | TASK [Gather facts] ************************************************************
+2023-08-16 19:01:05,369 p=16730 u=root n=ansible | ok: [10.71.71.134]
+2023-08-16 19:01:05,465 p=16730 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 19:01:05,507 p=16730 u=root n=ansible | ok: [10.71.71.115]
+2023-08-16 19:01:05,515 p=16730 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 19:01:05,555 p=16730 u=root n=ansible | ok: [10.71.71.168]
+2023-08-16 19:01:05,561 p=16730 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-16 19:01:05,800 p=16730 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-16 19:01:09,532 p=16730 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-16 19:01:09,533 p=16730 u=root n=ansible | ok: [10.71.71.214]
+2023-08-16 19:01:09,610 p=16730 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 19:01:10,137 p=16730 u=root n=ansible | ok: [10.71.71.115]
+2023-08-16 19:01:10,291 p=16730 u=root n=ansible | ok: [10.71.71.168]
+2023-08-16 19:01:10,298 p=16730 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************
+2023-08-16 19:01:10,412 p=16730 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-16 19:01:10,422 p=16730 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-16 19:01:10,425 p=16730 u=root n=ansible | skipping: [10.71.71.111]
+2023-08-16 19:01:10,450 p=16730 u=root n=ansible | skipping: [10.71.71.115]
+2023-08-16 19:01:11,652 p=16730 u=root n=ansible | changed: [10.71.71.134]
+2023-08-16 19:01:11,669 p=16730 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-16 19:01:11,669 p=16730 u=root n=ansible | 10.71.71.111               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-16 19:01:11,669 p=16730 u=root n=ansible | 10.71.71.115               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-16 19:01:11,669 p=16730 u=root n=ansible | 10.71.71.134               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-16 19:01:11,669 p=16730 u=root n=ansible | 10.71.71.168               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-16 19:01:11,670 p=16730 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-16 23:47:03,173 p=17185 u=root n=ansible | PLAY [website] **********************************************************************************************************************************************************
+2023-08-16 23:47:03,181 p=17185 u=root n=ansible | TASK [Fetch the latest code from the repository] ************************************************************************************************************************
+2023-08-16 23:47:04,812 p=17185 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 23:47:04,815 p=17185 u=root n=ansible | TASK [Install any new dependencies] *************************************************************************************************************************************
+2023-08-16 23:47:05,927 p=17185 u=root n=ansible | ok: [10.71.71.111]
+2023-08-16 23:47:05,930 p=17185 u=root n=ansible | TASK [Restart the Node.js application (using systemctl)] ****************************************************************************************************************
+2023-08-16 23:47:06,537 p=17185 u=root n=ansible | changed: [10.71.71.111]
+2023-08-16 23:47:06,546 p=17185 u=root n=ansible | PLAY RECAP **************************************************************************************************************************************************************
+2023-08-16 23:47:06,546 p=17185 u=root n=ansible | 10.71.71.111               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-17 00:30:34,825 p=17289 u=root n=ansible | PLAY [website] **********************************************************************************************************************************************************
+2023-08-17 00:30:34,832 p=17289 u=root n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************
+2023-08-17 00:30:36,242 p=17289 u=root n=ansible | ok: [10.71.71.111]
+2023-08-17 00:30:36,254 p=17289 u=root n=ansible | TASK [Fetch the latest code from the repository] ************************************************************************************************************************
+2023-08-17 00:30:37,300 p=17289 u=root n=ansible | ok: [10.71.71.111]
+2023-08-17 00:30:37,306 p=17289 u=root n=ansible | TASK [Install any new dependencies] *************************************************************************************************************************************
+2023-08-17 00:30:38,310 p=17289 u=root n=ansible | ok: [10.71.71.111]
+2023-08-17 00:30:38,317 p=17289 u=root n=ansible | TASK [Restart the Node.js application (using systemctl)] ****************************************************************************************************************
+2023-08-17 00:30:38,944 p=17289 u=root n=ansible | changed: [10.71.71.111]
+2023-08-17 00:30:38,960 p=17289 u=root n=ansible | PLAY RECAP **************************************************************************************************************************************************************
+2023-08-17 00:30:38,960 p=17289 u=root n=ansible | 10.71.71.111               : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-17 00:33:10,876 p=17338 u=root n=ansible | 10.71.71.111 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-17 00:33:10,978 p=17338 u=root n=ansible | 10.71.71.214 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-17 00:33:10,993 p=17338 u=root n=ansible | 10.71.71.115 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-17 00:33:10,996 p=17338 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com/a
+nsible/2.10/reference_appendices/interpreter_discovery.html for more information.
+
+2023-08-17 00:33:10,997 p=17338 u=root n=ansible | 10.71.71.134 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-17 00:33:11,067 p=17338 u=root n=ansible | 10.71.71.168 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-17 00:33:54,076 p=17416 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com/a
+nsible/2.10/reference_appendices/interpreter_discovery.html for more information.
+
+2023-08-17 00:33:54,077 p=17416 u=root n=ansible | 10.71.71.134 | CHANGED | rc=0 >>
+              total        used        free      shared  buff/cache   available
+Mem:          23.4G       17.6G        4.3G       50.8M        1.5G      325.8M
+Swap:          8.0G        1.2G        6.8G
+
+2023-08-17 00:33:54,119 p=17416 u=root n=ansible | 10.71.71.111 | CHANGED | rc=0 >>
+               total        used        free      shared  buff/cache   available
+Mem:           512Mi       211Mi        25Mi       0.0Ki       275Mi       300Mi
+Swap:          512Mi        16Mi       495Mi
+
+2023-08-17 00:33:54,135 p=17416 u=root n=ansible | 10.71.71.115 | CHANGED | rc=0 >>
+               total        used        free      shared  buff/cache   available
+Mem:           512Mi       158Mi        16Mi       2.0Mi       336Mi       353Mi
+Swap:          512Mi       6.0Mi       506Mi
+
+2023-08-17 00:33:54,153 p=17416 u=root n=ansible | 10.71.71.214 | CHANGED | rc=0 >>
+               total        used        free      shared  buff/cache   available
+Mem:           8.1Gi       1.4Gi       6.3Gi       0.0Ki       357Mi       6.7Gi
+Swap:          8.0Gi       659Mi       7.4Gi
+
+2023-08-17 00:33:54,161 p=17416 u=root n=ansible | 10.71.71.168 | CHANGED | rc=0 >>
+               total        used        free      shared  buff/cache   available
+Mem:           512Mi       169Mi       0.0Ki        22Mi       341Mi       342Mi
+Swap:          512Mi        94Mi       417Mi
+
+2023-08-17 01:00:02,656 p=18597 u=root n=ansible | PLAY [Update Servers] **********************************************************
+2023-08-17 01:00:02,667 p=18597 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-17 01:00:04,475 p=18597 u=root n=ansible | ok: [10.71.71.111]
+2023-08-17 01:00:04,497 p=18597 u=root n=ansible | ok: [10.71.71.214]
+2023-08-17 01:00:04,519 p=18597 u=root n=ansible | ok: [10.71.71.115]
+2023-08-17 01:00:04,522 p=18597 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2023-08-17 01:00:04,522 p=18597 u=root n=ansible | ok: [10.71.71.134]
+2023-08-17 01:00:04,665 p=18597 u=root n=ansible | ok: [10.71.71.168]
+2023-08-17 01:00:04,676 p=18597 u=root n=ansible | TASK [Gather facts] ************************************************************
+2023-08-17 01:00:06,132 p=18597 u=root n=ansible | ok: [10.71.71.214]
+2023-08-17 01:00:06,163 p=18597 u=root n=ansible | ok: [10.71.71.111]
+2023-08-17 01:00:06,181 p=18597 u=root n=ansible | ok: [10.71.71.115]
+2023-08-17 01:00:06,186 p=18597 u=root n=ansible | ok: [10.71.71.134]
+2023-08-17 01:00:06,291 p=18597 u=root n=ansible | ok: [10.71.71.168]
+2023-08-17 01:00:06,297 p=18597 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-17 01:00:06,518 p=18597 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-17 01:00:09,675 p=18597 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-17 01:00:09,675 p=18597 u=root n=ansible | ok: [10.71.71.115]
+2023-08-17 01:00:10,145 p=18597 u=root n=ansible | ok: [10.71.71.214]
+2023-08-17 01:00:10,952 p=18597 u=root n=ansible | ok: [10.71.71.111]
+2023-08-17 01:00:11,012 p=18597 u=root n=ansible | ok: [10.71.71.168]
+2023-08-17 01:00:11,019 p=18597 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************
+2023-08-17 01:00:11,140 p=18597 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-17 01:00:11,141 p=18597 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-17 01:00:11,156 p=18597 u=root n=ansible | skipping: [10.71.71.111]
+2023-08-17 01:00:11,176 p=18597 u=root n=ansible | skipping: [10.71.71.115]
+2023-08-17 01:00:13,124 p=18597 u=root n=ansible | changed: [10.71.71.134]
+2023-08-17 01:00:13,140 p=18597 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-17 01:00:13,140 p=18597 u=root n=ansible | 10.71.71.111               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-17 01:00:13,140 p=18597 u=root n=ansible | 10.71.71.115               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-17 01:00:13,140 p=18597 u=root n=ansible | 10.71.71.134               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-17 01:00:13,140 p=18597 u=root n=ansible | 10.71.71.168               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-17 01:00:13,140 p=18597 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-17 13:06:26,041 p=19613 u=root n=ansible | PLAY [all] *********************************************************************
+2023-08-17 13:06:26,050 p=19613 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-17 13:06:26,144 p=19613 u=root n=ansible | fatal: [10.71.71.105]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: root@10.71.71.105: Permission denied (publickey,password).", "unreachable": true}
+2023-08-17 13:06:26,145 p=19613 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-17 13:06:26,145 p=19613 u=root n=ansible | 10.71.71.105               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-17 13:07:24,504 p=19622 u=root n=ansible | PLAY [all] *********************************************************************
+2023-08-17 13:07:24,511 p=19622 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-17 13:07:25,071 p=19622 u=root n=ansible | fatal: [10.71.71.105]: FAILED! => {"msg": "Missing sudo password"}
+2023-08-17 13:07:25,074 p=19622 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-17 13:07:25,074 p=19622 u=root n=ansible | 10.71.71.105               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-17 13:08:39,829 p=19642 u=root n=ansible | PLAY [all] *********************************************************************
+2023-08-17 13:08:39,836 p=19642 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-17 13:08:40,389 p=19642 u=root n=ansible | fatal: [10.71.71.105]: FAILED! => {"msg": "Missing sudo password"}
+2023-08-17 13:08:40,391 p=19642 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-17 13:08:40,391 p=19642 u=root n=ansible | 10.71.71.105               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-17 13:09:14,106 p=19669 u=root n=ansible | PLAY [all] *********************************************************************
+2023-08-17 13:09:14,113 p=19669 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-17 13:09:15,045 p=19669 u=root n=ansible | ok: [10.71.71.105]
+2023-08-17 13:09:15,059 p=19669 u=root n=ansible | TASK [Ensure chrony (for time synchronization) is installed.] ******************
+2023-08-17 13:09:15,483 p=19669 u=root n=ansible | fatal: [10.71.71.105]: FAILED! => {"changed": false, "cmd": "dnf install -y python3-dnf", "msg": "[Errno 2] No such file or directory: b'dnf'", "rc": 2}
+2023-08-17 13:09:15,486 p=19669 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-17 13:09:15,486 p=19669 u=root n=ansible | 10.71.71.105               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-17 13:10:19,359 p=19694 u=root n=ansible | PLAY [all] *********************************************************************
+2023-08-17 13:10:19,365 p=19694 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-17 13:10:20,346 p=19694 u=root n=ansible | ok: [10.71.71.105]
+2023-08-17 13:10:20,359 p=19694 u=root n=ansible | TASK [Ensure chrony (for time synchronization) is installed.] ******************
+2023-08-17 13:10:28,223 p=19694 u=root n=ansible | changed: [10.71.71.105]
+2023-08-17 13:10:28,230 p=19694 u=root n=ansible | TASK [Ensure chrony is running.] ***********************************************
+2023-08-17 13:10:28,939 p=19694 u=root n=ansible | ok: [10.71.71.105]
+2023-08-17 13:10:28,955 p=19694 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-17 13:10:28,955 p=19694 u=root n=ansible | 10.71.71.105               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-17 13:16:46,900 p=19739 u=root n=ansible |  [ERROR]: User interrupted execution
+
+2023-08-17 13:16:54,731 p=19740 u=root n=ansible | PLAY [all] *********************************************************************
+2023-08-17 13:16:54,739 p=19740 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-17 13:16:55,837 p=19740 u=root n=ansible | ok: [10.71.71.105]
+2023-08-17 13:16:55,851 p=19740 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-17 13:16:59,593 p=19740 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-17 13:16:59,593 p=19740 u=root n=ansible | ok: [10.71.71.105]
+2023-08-17 13:16:59,599 p=19740 u=root n=ansible | TASK [Ensure chrony is running.] ***********************************************
+2023-08-17 13:17:00,271 p=19740 u=root n=ansible | ok: [10.71.71.105]
+2023-08-17 13:17:00,286 p=19740 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-17 13:17:00,286 p=19740 u=root n=ansible | 10.71.71.105               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-17 13:17:43,817 p=19778 u=root n=ansible | PLAY [all] *********************************************************************
+2023-08-17 13:17:43,825 p=19778 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-17 13:17:44,746 p=19778 u=root n=ansible | ok: [10.71.71.105]
+2023-08-17 13:17:44,770 p=19778 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-17 13:17:46,632 p=19778 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-17 13:17:46,632 p=19778 u=root n=ansible | ok: [10.71.71.105]
+2023-08-17 13:17:46,646 p=19778 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-17 13:17:46,646 p=19778 u=root n=ansible | 10.71.71.105               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-17 13:17:59,460 p=19802 u=root n=ansible | PLAY [all] *********************************************************************
+2023-08-17 13:17:59,467 p=19802 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-17 13:18:00,325 p=19802 u=root n=ansible | ok: [10.71.71.105]
+2023-08-17 13:18:00,336 p=19802 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-17 13:18:02,192 p=19802 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-17 13:18:02,193 p=19802 u=root n=ansible | ok: [10.71.71.105]
+2023-08-17 13:18:02,208 p=19802 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-17 13:18:02,208 p=19802 u=root n=ansible | 10.71.71.105               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-17 14:00:08,786 p=19838 u=root n=ansible | ERROR! the playbook: play2.yml could not be found
+2023-08-17 14:00:27,712 p=19840 u=root n=ansible | PLAY [all] *********************************************************************
+2023-08-17 14:00:27,718 p=19840 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-17 14:00:29,312 p=19840 u=root n=ansible | ok: [10.71.71.105]
+2023-08-17 14:00:29,735 p=19840 u=root n=ansible | ok: [10.71.71.202]
+2023-08-17 14:00:29,737 p=19840 u=root n=ansible | ok: [10.71.71.234]
+2023-08-17 14:00:29,747 p=19840 u=root n=ansible | ok: [10.71.71.186]
+2023-08-17 14:00:29,751 p=19840 u=root n=ansible | ok: [10.71.71.126]
+2023-08-17 14:00:29,766 p=19840 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-17 14:00:32,698 p=19840 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-17 14:00:32,698 p=19840 u=root n=ansible | ok: [10.71.71.105]
+2023-08-17 14:00:37,037 p=19840 u=root n=ansible | ok: [10.71.71.202]
+2023-08-17 14:00:37,068 p=19840 u=root n=ansible | ok: [10.71.71.126]
+2023-08-17 14:00:37,243 p=19840 u=root n=ansible | ok: [10.71.71.186]
+2023-08-17 14:00:38,978 p=19840 u=root n=ansible | ok: [10.71.71.234]
+2023-08-17 14:00:38,992 p=19840 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-17 14:00:38,992 p=19840 u=root n=ansible | 10.71.71.105               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-17 14:00:38,992 p=19840 u=root n=ansible | 10.71.71.126               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-17 14:00:38,993 p=19840 u=root n=ansible | 10.71.71.186               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-17 14:00:38,993 p=19840 u=root n=ansible | 10.71.71.202               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-17 14:00:38,993 p=19840 u=root n=ansible | 10.71.71.234               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-17 14:01:19,154 p=19960 u=root n=ansible | PLAY [all] *********************************************************************
+2023-08-17 14:01:19,160 p=19960 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-17 14:01:20,373 p=19960 u=root n=ansible | ok: [10.71.71.105]
+2023-08-17 14:01:20,791 p=19960 u=root n=ansible | ok: [10.71.71.202]
+2023-08-17 14:01:20,801 p=19960 u=root n=ansible | ok: [10.71.71.234]
+2023-08-17 14:01:20,826 p=19960 u=root n=ansible | ok: [10.71.71.126]
+2023-08-17 14:01:20,832 p=19960 u=root n=ansible | ok: [10.71.71.186]
+2023-08-17 14:01:20,847 p=19960 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-17 14:01:23,245 p=19960 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-17 14:01:23,245 p=19960 u=root n=ansible | ok: [10.71.71.105]
+2023-08-17 14:01:24,058 p=19960 u=root n=ansible | ok: [10.71.71.126]
+2023-08-17 14:01:25,047 p=19960 u=root n=ansible | ok: [10.71.71.202]
+2023-08-17 14:01:25,053 p=19960 u=root n=ansible | ok: [10.71.71.234]
+2023-08-17 14:01:32,436 p=19960 u=root n=ansible | ok: [10.71.71.186]
+2023-08-17 14:01:32,451 p=19960 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-17 14:01:32,451 p=19960 u=root n=ansible | 10.71.71.105               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-17 14:01:32,451 p=19960 u=root n=ansible | 10.71.71.126               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-17 14:01:32,451 p=19960 u=root n=ansible | 10.71.71.186               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-17 14:01:32,451 p=19960 u=root n=ansible | 10.71.71.202               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-17 14:01:32,451 p=19960 u=root n=ansible | 10.71.71.234               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-17 14:04:30,029 p=20064 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: ping
+
+2023-08-17 14:04:30,029 p=20064 u=root n=ansible | [WARNING]: No hosts matched, nothing to do
+
+2023-08-17 14:04:30,032 p=20064 u=root n=ansible | ERROR! No argument passed to command module
+2023-08-17 14:04:39,548 p=20065 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: ping
+
+2023-08-17 14:04:39,548 p=20065 u=root n=ansible | [WARNING]: No hosts matched, nothing to do
+
+2023-08-17 14:04:39,551 p=20065 u=root n=ansible | ERROR! No argument passed to command module
+2023-08-17 14:05:44,786 p=20066 u=root n=ansible | 10.71.71.105 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-17 14:05:45,022 p=20066 u=root n=ansible | 10.71.71.126 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-17 14:05:45,026 p=20066 u=root n=ansible | 10.71.71.186 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-17 14:05:45,027 p=20066 u=root n=ansible | 10.71.71.234 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-17 14:05:45,028 p=20066 u=root n=ansible | 10.71.71.202 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-17 14:06:49,676 p=20147 u=root n=ansible | 10.71.71.105 | CHANGED | rc=0 >>
+Filesystem                        Size  Used Avail Use% Mounted on
+/dev/mapper/pve-vm--109--disk--0  7.8G  721M  6.7G  10% /
+none                              492K  4.0K  488K   1% /dev
+tmpfs                              12G     0   12G   0% /dev/shm
+tmpfs                             4.7G  120K  4.7G   1% /run
+tmpfs                             5.0M     0  5.0M   0% /run/lock
+tmpfs                             2.4G     0  2.4G   0% /run/user/1000
+
+2023-08-17 14:06:49,903 p=20147 u=root n=ansible | 10.71.71.202 | CHANGED | rc=0 >>
+Filesystem                        Size  Used Avail Use% Mounted on
+/dev/mapper/pve-vm--111--disk--0  7.8G  719M  6.7G  10% /
+none                              492K  4.0K  488K   1% /dev
+tmpfs                              12G     0   12G   0% /dev/shm
+tmpfs                             4.7G  120K  4.7G   1% /run
+tmpfs                             5.0M     0  5.0M   0% /run/lock
+tmpfs                             2.4G     0  2.4G   0% /run/user/1000
+
+2023-08-17 14:06:49,908 p=20147 u=root n=ansible | 10.71.71.234 | CHANGED | rc=0 >>
+Filesystem                        Size  Used Avail Use% Mounted on
+/dev/mapper/pve-vm--112--disk--0  7.8G  719M  6.7G  10% /
+none                              492K  4.0K  488K   1% /dev
+tmpfs                              12G     0   12G   0% /dev/shm
+tmpfs                             4.7G  120K  4.7G   1% /run
+tmpfs                             5.0M     0  5.0M   0% /run/lock
+tmpfs                             2.4G     0  2.4G   0% /run/user/1000
+
+2023-08-17 14:06:49,915 p=20147 u=root n=ansible | 10.71.71.126 | CHANGED | rc=0 >>
+Filesystem                        Size  Used Avail Use% Mounted on
+/dev/mapper/pve-vm--113--disk--0  7.8G  719M  6.7G  10% /
+none                              492K  4.0K  488K   1% /dev
+tmpfs                              12G     0   12G   0% /dev/shm
+tmpfs                             4.7G  120K  4.7G   1% /run
+tmpfs                             5.0M     0  5.0M   0% /run/lock
+tmpfs                             2.4G     0  2.4G   0% /run/user/1000
+
+2023-08-17 14:06:49,920 p=20147 u=root n=ansible | 10.71.71.186 | CHANGED | rc=0 >>
+Filesystem                        Size  Used Avail Use% Mounted on
+/dev/mapper/pve-vm--110--disk--0  7.8G  719M  6.7G  10% /
+none                              492K  4.0K  488K   1% /dev
+tmpfs                              12G     0   12G   0% /dev/shm
+tmpfs                             4.7G  120K  4.7G   1% /run
+tmpfs                             5.0M     0  5.0M   0% /run/lock
+tmpfs                             2.4G     0  2.4G   0% /run/user/1000
+
+2023-08-18 01:00:02,041 p=1218 u=root n=ansible | PLAY [Update Servers] **********************************************************
+2023-08-18 01:00:02,054 p=1218 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-18 01:00:03,807 p=1218 u=root n=ansible | ok: [10.71.71.115]
+2023-08-18 01:00:03,823 p=1218 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2023-08-18 01:00:03,823 p=1218 u=root n=ansible | ok: [10.71.71.134]
+2023-08-18 01:00:03,906 p=1218 u=root n=ansible | ok: [10.71.71.214]
+2023-08-18 01:00:03,955 p=1218 u=root n=ansible | ok: [10.71.71.111]
+2023-08-18 01:00:03,982 p=1218 u=root n=ansible | ok: [10.71.71.168]
+2023-08-18 01:00:03,995 p=1218 u=root n=ansible | TASK [Gather facts] ************************************************************
+2023-08-18 01:00:05,345 p=1218 u=root n=ansible | ok: [10.71.71.115]
+2023-08-18 01:00:05,437 p=1218 u=root n=ansible | ok: [10.71.71.168]
+2023-08-18 01:00:05,441 p=1218 u=root n=ansible | ok: [10.71.71.134]
+2023-08-18 01:00:05,451 p=1218 u=root n=ansible | ok: [10.71.71.214]
+2023-08-18 01:00:05,538 p=1218 u=root n=ansible | ok: [10.71.71.111]
+2023-08-18 01:00:05,545 p=1218 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-18 01:00:05,770 p=1218 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-18 01:00:08,415 p=1218 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-18 01:00:08,415 p=1218 u=root n=ansible | ok: [10.71.71.111]
+2023-08-18 01:00:09,100 p=1218 u=root n=ansible | ok: [10.71.71.115]
+2023-08-18 01:00:10,283 p=1218 u=root n=ansible | ok: [10.71.71.168]
+2023-08-18 01:00:10,897 p=1218 u=root n=ansible | ok: [10.71.71.214]
+2023-08-18 01:00:10,906 p=1218 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************
+2023-08-18 01:00:11,035 p=1218 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-18 01:00:11,035 p=1218 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-18 01:00:11,047 p=1218 u=root n=ansible | skipping: [10.71.71.111]
+2023-08-18 01:00:11,052 p=1218 u=root n=ansible | skipping: [10.71.71.115]
+2023-08-18 01:00:12,365 p=1218 u=root n=ansible | changed: [10.71.71.134]
+2023-08-18 01:00:12,381 p=1218 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-18 01:00:12,381 p=1218 u=root n=ansible | 10.71.71.111               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-18 01:00:12,381 p=1218 u=root n=ansible | 10.71.71.115               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-18 01:00:12,381 p=1218 u=root n=ansible | 10.71.71.134               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-18 01:00:12,381 p=1218 u=root n=ansible | 10.71.71.168               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-18 01:00:12,381 p=1218 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-19 01:00:02,807 p=2522 u=root n=ansible | PLAY [Update Servers] **********************************************************
+2023-08-19 01:00:02,817 p=2522 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-19 01:00:05,586 p=2522 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2023-08-19 01:00:05,586 p=2522 u=root n=ansible | ok: [10.71.71.134]
+2023-08-19 01:00:05,658 p=2522 u=root n=ansible | ok: [10.71.71.168]
+2023-08-19 01:00:05,780 p=2522 u=root n=ansible | ok: [10.71.71.111]
+2023-08-19 01:00:05,876 p=2522 u=root n=ansible | ok: [10.71.71.115]
+2023-08-19 01:00:05,985 p=2522 u=root n=ansible | ok: [10.71.71.214]
+2023-08-19 01:00:06,000 p=2522 u=root n=ansible | TASK [Gather facts] ************************************************************
+2023-08-19 01:00:08,163 p=2522 u=root n=ansible | ok: [10.71.71.134]
+2023-08-19 01:00:08,289 p=2522 u=root n=ansible | ok: [10.71.71.168]
+2023-08-19 01:00:08,387 p=2522 u=root n=ansible | ok: [10.71.71.111]
+2023-08-19 01:00:08,528 p=2522 u=root n=ansible | ok: [10.71.71.115]
+2023-08-19 01:00:08,598 p=2522 u=root n=ansible | ok: [10.71.71.214]
+2023-08-19 01:00:08,604 p=2522 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-19 01:00:09,075 p=2522 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-19 01:00:15,098 p=2522 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-19 01:00:15,098 p=2522 u=root n=ansible | ok: [10.71.71.168]
+2023-08-19 01:00:15,440 p=2522 u=root n=ansible | ok: [10.71.71.115]
+2023-08-19 01:00:17,413 p=2522 u=root n=ansible | ok: [10.71.71.111]
+2023-08-19 01:00:18,269 p=2522 u=root n=ansible | ok: [10.71.71.214]
+2023-08-19 01:00:18,285 p=2522 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************
+2023-08-19 01:00:18,487 p=2522 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-19 01:00:18,490 p=2522 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-19 01:00:18,493 p=2522 u=root n=ansible | skipping: [10.71.71.111]
+2023-08-19 01:00:18,568 p=2522 u=root n=ansible | skipping: [10.71.71.115]
+2023-08-19 01:00:20,772 p=2522 u=root n=ansible | changed: [10.71.71.134]
+2023-08-19 01:00:20,788 p=2522 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-19 01:00:20,788 p=2522 u=root n=ansible | 10.71.71.111               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-19 01:00:20,788 p=2522 u=root n=ansible | 10.71.71.115               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-19 01:00:20,788 p=2522 u=root n=ansible | 10.71.71.134               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-19 01:00:20,788 p=2522 u=root n=ansible | 10.71.71.168               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-19 01:00:20,788 p=2522 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-20 01:00:02,562 p=4275 u=root n=ansible | PLAY [Update Servers] **********************************************************
+2023-08-20 01:00:02,572 p=4275 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-20 01:00:05,218 p=4275 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2023-08-20 01:00:05,218 p=4275 u=root n=ansible | ok: [10.71.71.134]
+2023-08-20 01:00:05,403 p=4275 u=root n=ansible | ok: [10.71.71.168]
+2023-08-20 01:00:05,503 p=4275 u=root n=ansible | ok: [10.71.71.111]
+2023-08-20 01:00:05,680 p=4275 u=root n=ansible | ok: [10.71.71.115]
+2023-08-20 01:00:05,712 p=4275 u=root n=ansible | ok: [10.71.71.214]
+2023-08-20 01:00:05,759 p=4275 u=root n=ansible | TASK [Gather facts] ************************************************************
+2023-08-20 01:00:07,965 p=4275 u=root n=ansible | ok: [10.71.71.134]
+2023-08-20 01:00:08,004 p=4275 u=root n=ansible | ok: [10.71.71.168]
+2023-08-20 01:00:08,167 p=4275 u=root n=ansible | ok: [10.71.71.111]
+2023-08-20 01:00:08,209 p=4275 u=root n=ansible | ok: [10.71.71.115]
+2023-08-20 01:00:08,302 p=4275 u=root n=ansible | ok: [10.71.71.214]
+2023-08-20 01:00:08,308 p=4275 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-20 01:00:08,774 p=4275 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-20 01:00:12,504 p=4275 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-20 01:00:12,504 p=4275 u=root n=ansible | ok: [10.71.71.168]
+2023-08-20 01:00:13,016 p=4275 u=root n=ansible | ok: [10.71.71.115]
+2023-08-20 01:00:13,406 p=4275 u=root n=ansible | ok: [10.71.71.111]
+2023-08-20 01:00:14,201 p=4275 u=root n=ansible | ok: [10.71.71.214]
+2023-08-20 01:00:14,212 p=4275 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************
+2023-08-20 01:00:14,392 p=4275 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-20 01:00:14,395 p=4275 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-20 01:00:14,454 p=4275 u=root n=ansible | skipping: [10.71.71.111]
+2023-08-20 01:00:14,480 p=4275 u=root n=ansible | skipping: [10.71.71.115]
+2023-08-20 01:00:16,759 p=4275 u=root n=ansible | changed: [10.71.71.134]
+2023-08-20 01:00:16,774 p=4275 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-20 01:00:16,775 p=4275 u=root n=ansible | 10.71.71.111               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-20 01:00:16,775 p=4275 u=root n=ansible | 10.71.71.115               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-20 01:00:16,775 p=4275 u=root n=ansible | 10.71.71.134               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-20 01:00:16,775 p=4275 u=root n=ansible | 10.71.71.168               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-20 01:00:16,775 p=4275 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-20 17:22:02,260 p=6506 u=root n=ansible | PLAY [Update Servers] **********************************************************
+2023-08-20 17:22:02,270 p=6506 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-20 17:22:05,124 p=6506 u=root n=ansible | ok: [10.71.71.111]
+2023-08-20 17:22:05,345 p=6506 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2023-08-20 17:22:05,346 p=6506 u=root n=ansible | ok: [10.71.71.134]
+2023-08-20 17:22:05,500 p=6506 u=root n=ansible | ok: [10.71.71.115]
+2023-08-20 17:22:05,535 p=6506 u=root n=ansible | ok: [10.71.71.168]
+2023-08-20 17:22:05,620 p=6506 u=root n=ansible | ok: [10.71.71.214]
+2023-08-20 17:22:05,633 p=6506 u=root n=ansible | TASK [Gather facts] ************************************************************
+2023-08-20 17:22:07,791 p=6506 u=root n=ansible | ok: [10.71.71.111]
+2023-08-20 17:22:08,082 p=6506 u=root n=ansible | ok: [10.71.71.134]
+2023-08-20 17:22:08,194 p=6506 u=root n=ansible | ok: [10.71.71.168]
+2023-08-20 17:22:08,273 p=6506 u=root n=ansible | ok: [10.71.71.115]
+2023-08-20 17:22:08,296 p=6506 u=root n=ansible | ok: [10.71.71.214]
+2023-08-20 17:22:08,302 p=6506 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-20 17:22:08,790 p=6506 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-20 17:22:14,185 p=6506 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-20 17:22:14,185 p=6506 u=root n=ansible | ok: [10.71.71.111]
+2023-08-20 17:22:15,587 p=6506 u=root n=ansible | ok: [10.71.71.115]
+2023-08-20 17:22:16,782 p=6506 u=root n=ansible | ok: [10.71.71.168]
+2023-08-20 17:22:16,882 p=6506 u=root n=ansible | ok: [10.71.71.214]
+2023-08-20 17:22:16,892 p=6506 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************
+2023-08-20 17:22:17,088 p=6506 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-20 17:22:17,089 p=6506 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-20 17:22:17,098 p=6506 u=root n=ansible | skipping: [10.71.71.111]
+2023-08-20 17:22:17,158 p=6506 u=root n=ansible | skipping: [10.71.71.115]
+2023-08-20 17:22:34,995 p=6506 u=root n=ansible | changed: [10.71.71.134]
+2023-08-20 17:22:35,011 p=6506 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-20 17:22:35,011 p=6506 u=root n=ansible | 10.71.71.111               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-20 17:22:35,011 p=6506 u=root n=ansible | 10.71.71.115               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-20 17:22:35,012 p=6506 u=root n=ansible | 10.71.71.134               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-20 17:22:35,012 p=6506 u=root n=ansible | 10.71.71.168               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-20 17:22:35,012 p=6506 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-21 01:00:02,484 p=6757 u=root n=ansible | PLAY [Update Servers] **********************************************************
+2023-08-21 01:00:02,494 p=6757 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-21 01:00:04,940 p=6757 u=root n=ansible | ok: [10.71.71.111]
+2023-08-21 01:00:04,998 p=6757 u=root n=ansible | ok: [10.71.71.115]
+2023-08-21 01:00:05,104 p=6757 u=root n=ansible | ok: [10.71.71.168]
+2023-08-21 01:00:05,199 p=6757 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2023-08-21 01:00:05,199 p=6757 u=root n=ansible | ok: [10.71.71.134]
+2023-08-21 01:00:05,378 p=6757 u=root n=ansible | ok: [10.71.71.214]
+2023-08-21 01:00:05,390 p=6757 u=root n=ansible | TASK [Gather facts] ************************************************************
+2023-08-21 01:00:07,354 p=6757 u=root n=ansible | ok: [10.71.71.111]
+2023-08-21 01:00:07,378 p=6757 u=root n=ansible | ok: [10.71.71.115]
+2023-08-21 01:00:07,424 p=6757 u=root n=ansible | ok: [10.71.71.168]
+2023-08-21 01:00:07,687 p=6757 u=root n=ansible | ok: [10.71.71.134]
+2023-08-21 01:00:07,788 p=6757 u=root n=ansible | ok: [10.71.71.214]
+2023-08-21 01:00:07,794 p=6757 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-21 01:00:08,274 p=6757 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-21 01:00:10,988 p=6757 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-21 01:00:10,988 p=6757 u=root n=ansible | ok: [10.71.71.111]
+2023-08-21 01:00:12,014 p=6757 u=root n=ansible | ok: [10.71.71.115]
+2023-08-21 01:00:13,868 p=6757 u=root n=ansible | ok: [10.71.71.168]
+2023-08-21 01:00:15,695 p=6757 u=root n=ansible | ok: [10.71.71.214]
+2023-08-21 01:00:15,702 p=6757 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************
+2023-08-21 01:00:15,892 p=6757 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-21 01:00:15,893 p=6757 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-21 01:00:15,963 p=6757 u=root n=ansible | skipping: [10.71.71.111]
+2023-08-21 01:00:15,975 p=6757 u=root n=ansible | skipping: [10.71.71.115]
+2023-08-21 01:00:18,169 p=6757 u=root n=ansible | changed: [10.71.71.134]
+2023-08-21 01:00:18,185 p=6757 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-21 01:00:18,185 p=6757 u=root n=ansible | 10.71.71.111               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-21 01:00:18,185 p=6757 u=root n=ansible | 10.71.71.115               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-21 01:00:18,185 p=6757 u=root n=ansible | 10.71.71.134               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-21 01:00:18,185 p=6757 u=root n=ansible | 10.71.71.168               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-21 01:00:18,185 p=6757 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-21 23:54:27,750 p=7829 u=root n=ansible | PLAY [all] *****************************************************************************************************************************************************
+2023-08-21 23:54:27,757 p=7829 u=root n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************
+2023-08-21 23:54:30,875 p=7829 u=root n=ansible | fatal: [10.71.71.202]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.202 port 22: No route to host", "unreachable": true}
+2023-08-21 23:54:30,910 p=7829 u=root n=ansible | fatal: [10.71.71.234]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.234 port 22: No route to host", "unreachable": true}
+2023-08-21 23:54:30,912 p=7829 u=root n=ansible | fatal: [10.71.71.105]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.105 port 22: No route to host", "unreachable": true}
+2023-08-21 23:54:30,912 p=7829 u=root n=ansible | fatal: [10.71.71.186]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.186 port 22: No route to host", "unreachable": true}
+2023-08-21 23:54:30,912 p=7829 u=root n=ansible | fatal: [10.71.71.126]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.126 port 22: No route to host", "unreachable": true}
+2023-08-21 23:54:30,918 p=7829 u=root n=ansible | PLAY RECAP *****************************************************************************************************************************************************
+2023-08-21 23:54:30,918 p=7829 u=root n=ansible | 10.71.71.105               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-21 23:54:30,918 p=7829 u=root n=ansible | 10.71.71.126               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-21 23:54:30,919 p=7829 u=root n=ansible | 10.71.71.186               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-21 23:54:30,919 p=7829 u=root n=ansible | 10.71.71.202               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-21 23:54:30,919 p=7829 u=root n=ansible | 10.71.71.234               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-21 23:54:38,871 p=7848 u=root n=ansible | PLAY [all] *****************************************************************************************************************************************************
+2023-08-21 23:54:38,878 p=7848 u=root n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************
+2023-08-21 23:54:42,015 p=7848 u=root n=ansible | fatal: [10.71.71.234]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.234 port 22: No route to host", "unreachable": true}
+2023-08-21 23:54:42,018 p=7848 u=root n=ansible | fatal: [10.71.71.202]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.202 port 22: No route to host", "unreachable": true}
+2023-08-21 23:54:42,019 p=7848 u=root n=ansible | fatal: [10.71.71.186]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.186 port 22: No route to host", "unreachable": true}
+2023-08-21 23:54:42,019 p=7848 u=root n=ansible | fatal: [10.71.71.105]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.105 port 22: No route to host", "unreachable": true}
+2023-08-21 23:54:42,019 p=7848 u=root n=ansible | fatal: [10.71.71.126]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.126 port 22: No route to host", "unreachable": true}
+2023-08-21 23:54:42,025 p=7848 u=root n=ansible | PLAY RECAP *****************************************************************************************************************************************************
+2023-08-21 23:54:42,025 p=7848 u=root n=ansible | 10.71.71.105               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-21 23:54:42,025 p=7848 u=root n=ansible | 10.71.71.126               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-21 23:54:42,025 p=7848 u=root n=ansible | 10.71.71.186               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-21 23:54:42,025 p=7848 u=root n=ansible | 10.71.71.202               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-21 23:54:42,026 p=7848 u=root n=ansible | 10.71.71.234               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-21 23:54:48,546 p=7867 u=root n=ansible | PLAY [all] *****************************************************************************************************************************************************
+2023-08-21 23:54:48,554 p=7867 u=root n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************
+2023-08-21 23:54:51,676 p=7867 u=root n=ansible | fatal: [10.71.71.105]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.105 port 22: No route to host", "unreachable": true}
+2023-08-21 23:54:51,676 p=7867 u=root n=ansible | fatal: [10.71.71.202]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.202 port 22: No route to host", "unreachable": true}
+2023-08-21 23:54:51,709 p=7867 u=root n=ansible | fatal: [10.71.71.126]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.126 port 22: No route to host", "unreachable": true}
+2023-08-21 23:54:51,709 p=7867 u=root n=ansible | fatal: [10.71.71.186]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.186 port 22: No route to host", "unreachable": true}
+2023-08-21 23:54:51,710 p=7867 u=root n=ansible | fatal: [10.71.71.234]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.234 port 22: No route to host", "unreachable": true}
+2023-08-21 23:54:51,715 p=7867 u=root n=ansible | PLAY RECAP *****************************************************************************************************************************************************
+2023-08-21 23:54:51,715 p=7867 u=root n=ansible | 10.71.71.105               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-21 23:54:51,715 p=7867 u=root n=ansible | 10.71.71.126               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-21 23:54:51,715 p=7867 u=root n=ansible | 10.71.71.186               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-21 23:54:51,715 p=7867 u=root n=ansible | 10.71.71.202               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-21 23:54:51,715 p=7867 u=root n=ansible | 10.71.71.234               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-21 23:55:36,126 p=7889 u=root n=ansible | 10.71.71.202 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.202 port 22: No route to host",
+    "unreachable": true
+}
+2023-08-21 23:55:36,129 p=7889 u=root n=ansible | 10.71.71.186 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.186 port 22: No route to host",
+    "unreachable": true
+}
+2023-08-21 23:55:36,129 p=7889 u=root n=ansible | 10.71.71.126 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.126 port 22: No route to host",
+    "unreachable": true
+}
+2023-08-21 23:55:36,130 p=7889 u=root n=ansible | 10.71.71.105 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.105 port 22: No route to host",
+    "unreachable": true
+}
+2023-08-21 23:55:36,155 p=7889 u=root n=ansible | 10.71.71.234 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.234 port 22: No route to host",
+    "unreachable": true
+}
+2023-08-22 01:00:02,065 p=7935 u=root n=ansible | PLAY [Update Servers] **********************************************************
+2023-08-22 01:00:02,071 p=7935 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-22 01:00:03,884 p=7935 u=root n=ansible | ok: [10.71.71.115]
+2023-08-22 01:00:03,889 p=7935 u=root n=ansible | ok: [10.71.71.111]
+2023-08-22 01:00:03,917 p=7935 u=root n=ansible | ok: [10.71.71.214]
+2023-08-22 01:00:03,924 p=7935 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2023-08-22 01:00:03,924 p=7935 u=root n=ansible | ok: [10.71.71.134]
+2023-08-22 01:00:04,191 p=7935 u=root n=ansible | ok: [10.71.71.168]
+2023-08-22 01:00:04,208 p=7935 u=root n=ansible | TASK [Gather facts] ************************************************************
+2023-08-22 01:00:05,394 p=7935 u=root n=ansible | ok: [10.71.71.134]
+2023-08-22 01:00:05,617 p=7935 u=root n=ansible | ok: [10.71.71.214]
+2023-08-22 01:00:05,638 p=7935 u=root n=ansible | ok: [10.71.71.115]
+2023-08-22 01:00:05,669 p=7935 u=root n=ansible | ok: [10.71.71.111]
+2023-08-22 01:00:05,700 p=7935 u=root n=ansible | ok: [10.71.71.168]
+2023-08-22 01:00:05,707 p=7935 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-22 01:00:05,957 p=7935 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-22 01:00:08,799 p=7935 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-22 01:00:08,799 p=7935 u=root n=ansible | ok: [10.71.71.111]
+2023-08-22 01:00:09,545 p=7935 u=root n=ansible | ok: [10.71.71.115]
+2023-08-22 01:00:09,909 p=7935 u=root n=ansible | ok: [10.71.71.168]
+2023-08-22 01:00:10,661 p=7935 u=root n=ansible | ok: [10.71.71.214]
+2023-08-22 01:00:10,669 p=7935 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************
+2023-08-22 01:00:10,786 p=7935 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-22 01:00:10,786 p=7935 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-22 01:00:10,809 p=7935 u=root n=ansible | skipping: [10.71.71.111]
+2023-08-22 01:00:10,828 p=7935 u=root n=ansible | skipping: [10.71.71.115]
+2023-08-22 01:00:12,579 p=7935 u=root n=ansible | changed: [10.71.71.134]
+2023-08-22 01:00:12,597 p=7935 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-22 01:00:12,597 p=7935 u=root n=ansible | 10.71.71.111               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-22 01:00:12,597 p=7935 u=root n=ansible | 10.71.71.115               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-22 01:00:12,597 p=7935 u=root n=ansible | 10.71.71.134               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-22 01:00:12,597 p=7935 u=root n=ansible | 10.71.71.168               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-22 01:00:12,597 p=7935 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-22 13:59:20,286 p=8733 u=root n=ansible | 10.71.71.168 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: dom@10.71.71.168: Permission denied (publickey,password).",
+    "unreachable": true
+}
+2023-08-22 13:59:23,261 p=8733 u=root n=ansible | 10.71.71.126 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.126 port 22: No route to host",
+    "unreachable": true
+}
+2023-08-22 13:59:23,262 p=8733 u=root n=ansible | 10.71.71.186 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.186 port 22: No route to host",
+    "unreachable": true
+}
+2023-08-22 13:59:23,262 p=8733 u=root n=ansible | 10.71.71.202 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.202 port 22: No route to host",
+    "unreachable": true
+}
+2023-08-22 13:59:30,216 p=8733 u=root n=ansible | 10.71.71.234 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.234 port 22: Connection timed out",
+    "unreachable": true
+}
+2023-08-22 14:03:37,456 p=9706 u=root n=ansible | 10.71.71.111 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-22 14:03:37,467 p=9706 u=root n=ansible | 10.71.71.115 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-22 14:03:37,491 p=9706 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python interpreter at /usr/bin/python,
+but future installation of another Python interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information.
+
+2023-08-22 14:03:37,491 p=9706 u=root n=ansible | 10.71.71.134 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-22 14:03:37,555 p=9706 u=root n=ansible | 10.71.71.214 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-22 14:03:37,560 p=9706 u=root n=ansible | 10.71.71.168 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-22 14:03:55,214 p=9785 u=root n=ansible | PLAY [all] ****************************************************************************************************
+2023-08-22 14:03:55,221 p=9785 u=root n=ansible | TASK [Gathering Facts] ****************************************************************************************
+2023-08-22 14:03:56,617 p=9785 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python interpreter at /usr/bin/python,
+but future installation of another Python interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information.
+
+2023-08-22 14:03:56,617 p=9785 u=root n=ansible | ok: [10.71.71.134]
+2023-08-22 14:03:56,791 p=9785 u=root n=ansible | ok: [10.71.71.115]
+2023-08-22 14:03:56,840 p=9785 u=root n=ansible | ok: [10.71.71.214]
+2023-08-22 14:03:56,889 p=9785 u=root n=ansible | ok: [10.71.71.111]
+2023-08-22 14:03:56,926 p=9785 u=root n=ansible | ok: [10.71.71.168]
+2023-08-22 14:03:56,939 p=9785 u=root n=ansible | TASK [Ensure chrony (for time synchronization) is installed.] *************************************************
+2023-08-22 14:03:57,715 p=9785 u=root n=ansible | [WARNING]: Updating cache and auto-installing missing dependency: python3-apt
+
+2023-08-22 14:03:57,716 p=9785 u=root n=ansible | fatal: [10.71.71.134]: FAILED! => {"changed": false, "cmd": "apt-get update", "msg": "[Errno 2] No such file or directory: b'apt-get'", "rc": 2}
+2023-08-22 14:04:02,010 p=9785 u=root n=ansible | changed: [10.71.71.111]
+2023-08-22 14:04:03,092 p=9785 u=root n=ansible | changed: [10.71.71.115]
+2023-08-22 14:04:03,637 p=9785 u=root n=ansible | changed: [10.71.71.168]
+2023-08-22 14:04:03,808 p=9785 u=root n=ansible | changed: [10.71.71.214]
+2023-08-22 14:04:03,819 p=9785 u=root n=ansible | TASK [Ensure chrony is running.] ******************************************************************************
+2023-08-22 14:04:04,827 p=9785 u=root n=ansible | fatal: [10.71.71.111]: FAILED! => {"changed": false, "msg": "Unable to start service chronyd: Job for chrony.service failed because the control process exited with error code.\nSee \"systemctl status chrony.service\" and \"journalctl -xe\" for details.\n"}
+2023-08-22 14:04:04,843 p=9785 u=root n=ansible | fatal: [10.71.71.168]: FAILED! => {"changed": false, "msg": "Unable to start service chronyd: Job for chrony.service failed because the control process exited with error code.\nSee \"systemctl status chrony.service\" and \"journalctl -xe\" for details.\n"}
+2023-08-22 14:04:04,890 p=9785 u=root n=ansible | fatal: [10.71.71.115]: FAILED! => {"changed": false, "msg": "Unable to start service chronyd: Job for chrony.service failed because the control process exited with error code.\nSee \"systemctl status chrony.service\" and \"journalctl -xe\" for details.\n"}
+2023-08-22 14:04:04,895 p=9785 u=root n=ansible | fatal: [10.71.71.214]: FAILED! => {"changed": false, "msg": "Unable to start service chronyd: Job for chrony.service failed because the control process exited with error code.\nSee \"systemctl status chrony.service\" and \"journalctl -xe\" for details.\n"}
+2023-08-22 14:04:04,898 p=9785 u=root n=ansible | PLAY RECAP ****************************************************************************************************
+2023-08-22 14:04:04,898 p=9785 u=root n=ansible | 10.71.71.111               : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-22 14:04:04,899 p=9785 u=root n=ansible | 10.71.71.115               : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-22 14:04:04,899 p=9785 u=root n=ansible | 10.71.71.134               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-22 14:04:04,899 p=9785 u=root n=ansible | 10.71.71.168               : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-22 14:04:04,899 p=9785 u=root n=ansible | 10.71.71.214               : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-22 14:05:13,550 p=9928 u=root n=ansible | PLAY [all] ****************************************************************************************************
+2023-08-22 14:05:13,558 p=9928 u=root n=ansible | TASK [Gathering Facts] ****************************************************************************************
+2023-08-22 14:05:15,125 p=9928 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python interpreter at /usr/bin/python,
+but future installation of another Python interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information.
+
+2023-08-22 14:05:15,125 p=9928 u=root n=ansible | ok: [10.71.71.134]
+2023-08-22 14:05:15,314 p=9928 u=root n=ansible | ok: [10.71.71.115]
+2023-08-22 14:05:15,339 p=9928 u=root n=ansible | ok: [10.71.71.214]
+2023-08-22 14:05:15,452 p=9928 u=root n=ansible | ok: [10.71.71.111]
+2023-08-22 14:05:15,460 p=9928 u=root n=ansible | ok: [10.71.71.168]
+2023-08-22 14:05:15,472 p=9928 u=root n=ansible | TASK [Ensure chrony (for time synchronization) is installed.] *************************************************
+2023-08-22 14:05:16,272 p=9928 u=root n=ansible | [WARNING]: Updating cache and auto-installing missing dependency: python3-apt
+
+2023-08-22 14:05:16,273 p=9928 u=root n=ansible | fatal: [10.71.71.134]: FAILED! => {"changed": false, "cmd": "apt-get update", "msg": "[Errno 2] No such file or directory: b'apt-get'", "rc": 2}
+2023-08-22 14:05:16,754 p=9928 u=root n=ansible | ok: [10.71.71.115]
+2023-08-22 14:05:16,870 p=9928 u=root n=ansible | ok: [10.71.71.111]
+2023-08-22 14:05:16,981 p=9928 u=root n=ansible | ok: [10.71.71.168]
+2023-08-22 14:05:16,995 p=9928 u=root n=ansible | ok: [10.71.71.214]
+2023-08-22 14:05:17,003 p=9928 u=root n=ansible | TASK [Ensure chrony is running.] ******************************************************************************
+2023-08-22 14:05:17,968 p=9928 u=root n=ansible | fatal: [10.71.71.111]: FAILED! => {"changed": false, "msg": "Unable to start service chronyd: Job for chrony.service failed because the control process exited with error code.\nSee \"systemctl status chrony.service\" and \"journalctl -xe\" for details.\n"}
+2023-08-22 14:05:18,021 p=9928 u=root n=ansible | fatal: [10.71.71.168]: FAILED! => {"changed": false, "msg": "Unable to start service chronyd: Job for chrony.service failed because the control process exited with error code.\nSee \"systemctl status chrony.service\" and \"journalctl -xe\" for details.\n"}
+2023-08-22 14:05:18,090 p=9928 u=root n=ansible | fatal: [10.71.71.115]: FAILED! => {"changed": false, "msg": "Unable to start service chronyd: Job for chrony.service failed because the control process exited with error code.\nSee \"systemctl status chrony.service\" and \"journalctl -xe\" for details.\n"}
+2023-08-22 14:05:18,096 p=9928 u=root n=ansible | fatal: [10.71.71.214]: FAILED! => {"changed": false, "msg": "Unable to start service chronyd: Job for chrony.service failed because the control process exited with error code.\nSee \"systemctl status chrony.service\" and \"journalctl -xe\" for details.\n"}
+2023-08-22 14:05:18,100 p=9928 u=root n=ansible | PLAY RECAP ****************************************************************************************************
+2023-08-22 14:05:18,100 p=9928 u=root n=ansible | 10.71.71.111               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-22 14:05:18,100 p=9928 u=root n=ansible | 10.71.71.115               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-22 14:05:18,100 p=9928 u=root n=ansible | 10.71.71.134               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-22 14:05:18,100 p=9928 u=root n=ansible | 10.71.71.168               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-22 14:05:18,100 p=9928 u=root n=ansible | 10.71.71.214               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-22 14:05:46,632 p=10085 u=root n=ansible |  [ERROR]: User interrupted execution
+
+2023-08-22 14:05:48,794 p=10086 u=root n=ansible | PLAY [all] ****************************************************************************************************
+2023-08-22 14:05:48,800 p=10086 u=root n=ansible | TASK [Gathering Facts] ****************************************************************************************
+2023-08-22 14:05:50,330 p=10086 u=root n=ansible | ok: [10.71.71.214]
+2023-08-22 14:05:50,333 p=10086 u=root n=ansible | ok: [10.71.71.168]
+2023-08-22 14:05:50,341 p=10086 u=root n=ansible | ok: [10.71.71.111]
+2023-08-22 14:05:50,388 p=10086 u=root n=ansible | ok: [10.71.71.115]
+2023-08-22 14:05:50,400 p=10086 u=root n=ansible | TASK [Ensure chrony (for time synchronization) is installed.] *************************************************
+2023-08-22 14:05:51,646 p=10086 u=root n=ansible | ok: [10.71.71.111]
+2023-08-22 14:05:51,666 p=10086 u=root n=ansible | ok: [10.71.71.115]
+2023-08-22 14:05:51,721 p=10086 u=root n=ansible | ok: [10.71.71.168]
+2023-08-22 14:05:51,874 p=10086 u=root n=ansible | ok: [10.71.71.214]
+2023-08-22 14:05:51,881 p=10086 u=root n=ansible | TASK [Ensure chrony is running.] ******************************************************************************
+2023-08-22 14:05:52,833 p=10086 u=root n=ansible | fatal: [10.71.71.115]: FAILED! => {"changed": false, "msg": "Unable to start service chronyd: Job for chrony.service failed because the control process exited with error code.\nSee \"systemctl status chrony.service\" and \"journalctl -xe\" for details.\n"}
+2023-08-22 14:05:52,849 p=10086 u=root n=ansible | fatal: [10.71.71.168]: FAILED! => {"changed": false, "msg": "Unable to start service chronyd: Job for chrony.service failed because the control process exited with error code.\nSee \"systemctl status chrony.service\" and \"journalctl -xe\" for details.\n"}
+2023-08-22 14:05:52,866 p=10086 u=root n=ansible | fatal: [10.71.71.111]: FAILED! => {"changed": false, "msg": "Unable to start service chronyd: Job for chrony.service failed because the control process exited with error code.\nSee \"systemctl status chrony.service\" and \"journalctl -xe\" for details.\n"}
+2023-08-22 14:05:52,869 p=10086 u=root n=ansible | fatal: [10.71.71.214]: FAILED! => {"changed": false, "msg": "Unable to start service chronyd: Job for chrony.service failed because the control process exited with error code.\nSee \"systemctl status chrony.service\" and \"journalctl -xe\" for details.\n"}
+2023-08-22 14:05:52,872 p=10086 u=root n=ansible | PLAY RECAP ****************************************************************************************************
+2023-08-22 14:05:52,872 p=10086 u=root n=ansible | 10.71.71.111               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-22 14:05:52,872 p=10086 u=root n=ansible | 10.71.71.115               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-22 14:05:52,872 p=10086 u=root n=ansible | 10.71.71.168               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-22 14:05:52,872 p=10086 u=root n=ansible | 10.71.71.214               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-22 14:06:46,447 p=10210 u=root n=ansible | PLAY [all] ****************************************************************************************************
+2023-08-22 14:06:46,453 p=10210 u=root n=ansible | TASK [Gathering Facts] ****************************************************************************************
+2023-08-22 14:06:47,959 p=10210 u=root n=ansible | ok: [10.71.71.214]
+2023-08-22 14:06:47,980 p=10210 u=root n=ansible | ok: [10.71.71.168]
+2023-08-22 14:06:48,011 p=10210 u=root n=ansible | ok: [10.71.71.115]
+2023-08-22 14:06:48,019 p=10210 u=root n=ansible | ok: [10.71.71.111]
+2023-08-22 14:06:48,032 p=10210 u=root n=ansible | TASK [Ensure chrony (for time synchronization) is installed.] *************************************************
+2023-08-22 14:06:49,225 p=10210 u=root n=ansible | ok: [10.71.71.111]
+2023-08-22 14:06:49,332 p=10210 u=root n=ansible | ok: [10.71.71.115]
+2023-08-22 14:06:49,348 p=10210 u=root n=ansible | ok: [10.71.71.168]
+2023-08-22 14:06:49,511 p=10210 u=root n=ansible | ok: [10.71.71.214]
+2023-08-22 14:06:49,518 p=10210 u=root n=ansible | TASK [Ensure chrony is running.] ******************************************************************************
+2023-08-22 14:06:50,435 p=10210 u=root n=ansible | fatal: [10.71.71.111]: FAILED! => {"changed": false, "msg": "Unable to start service chronyd: Job for chrony.service failed because the control process exited with error code.\nSee \"systemctl status chrony.service\" and \"journalctl -xe\" for details.\n"}
+2023-08-22 14:06:50,472 p=10210 u=root n=ansible | fatal: [10.71.71.168]: FAILED! => {"changed": false, "msg": "Unable to start service chronyd: Job for chrony.service failed because the control process exited with error code.\nSee \"systemctl status chrony.service\" and \"journalctl -xe\" for details.\n"}
+2023-08-22 14:06:50,493 p=10210 u=root n=ansible | fatal: [10.71.71.214]: FAILED! => {"changed": false, "msg": "Unable to start service chronyd: Job for chrony.service failed because the control process exited with error code.\nSee \"systemctl status chrony.service\" and \"journalctl -xe\" for details.\n"}
+2023-08-22 14:06:50,508 p=10210 u=root n=ansible | fatal: [10.71.71.115]: FAILED! => {"changed": false, "msg": "Unable to start service chronyd: Job for chrony.service failed because the control process exited with error code.\nSee \"systemctl status chrony.service\" and \"journalctl -xe\" for details.\n"}
+2023-08-22 14:06:50,511 p=10210 u=root n=ansible | PLAY RECAP ****************************************************************************************************
+2023-08-22 14:06:50,511 p=10210 u=root n=ansible | 10.71.71.111               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-22 14:06:50,511 p=10210 u=root n=ansible | 10.71.71.115               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-22 14:06:50,512 p=10210 u=root n=ansible | 10.71.71.168               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-22 14:06:50,512 p=10210 u=root n=ansible | 10.71.71.214               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-22 14:44:13,968 p=10381 u=root n=ansible | PLAY [website] ************************************************************************************************
+2023-08-22 14:44:13,975 p=10381 u=root n=ansible | TASK [Gathering Facts] ****************************************************************************************
+2023-08-22 14:44:15,392 p=10381 u=root n=ansible | ok: [10.71.71.111]
+2023-08-22 14:44:15,408 p=10381 u=root n=ansible | TASK [Fetch the latest code from the repository] **************************************************************
+2023-08-22 14:44:16,401 p=10381 u=root n=ansible | ok: [10.71.71.111]
+2023-08-22 14:44:16,408 p=10381 u=root n=ansible | TASK [Install any new dependencies] ***************************************************************************
+2023-08-22 14:44:17,403 p=10381 u=root n=ansible | ok: [10.71.71.111]
+2023-08-22 14:44:17,410 p=10381 u=root n=ansible | TASK [Restart the Node.js application (using systemctl)] ******************************************************
+2023-08-22 14:44:18,042 p=10381 u=root n=ansible | changed: [10.71.71.111]
+2023-08-22 14:44:18,058 p=10381 u=root n=ansible | PLAY RECAP ****************************************************************************************************
+2023-08-22 14:44:18,059 p=10381 u=root n=ansible | 10.71.71.111               : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-23 01:00:02,345 p=10577 u=root n=ansible | PLAY [Update Servers] **********************************************************
+2023-08-23 01:00:02,351 p=10577 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-23 01:00:03,788 p=10577 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2023-08-23 01:00:03,788 p=10577 u=root n=ansible | ok: [10.71.71.134]
+2023-08-23 01:00:04,077 p=10577 u=root n=ansible | ok: [10.71.71.214]
+2023-08-23 01:00:04,084 p=10577 u=root n=ansible | ok: [10.71.71.115]
+2023-08-23 01:00:04,162 p=10577 u=root n=ansible | ok: [10.71.71.111]
+2023-08-23 01:00:04,190 p=10577 u=root n=ansible | ok: [10.71.71.168]
+2023-08-23 01:00:04,202 p=10577 u=root n=ansible | TASK [Gather facts] ************************************************************
+2023-08-23 01:00:05,518 p=10577 u=root n=ansible | ok: [10.71.71.134]
+2023-08-23 01:00:05,655 p=10577 u=root n=ansible | ok: [10.71.71.115]
+2023-08-23 01:00:05,660 p=10577 u=root n=ansible | ok: [10.71.71.111]
+2023-08-23 01:00:05,669 p=10577 u=root n=ansible | ok: [10.71.71.214]
+2023-08-23 01:00:05,737 p=10577 u=root n=ansible | ok: [10.71.71.168]
+2023-08-23 01:00:05,744 p=10577 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-23 01:00:05,990 p=10577 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-23 01:00:08,805 p=10577 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-23 01:00:08,805 p=10577 u=root n=ansible | ok: [10.71.71.168]
+2023-08-23 01:00:09,424 p=10577 u=root n=ansible | ok: [10.71.71.115]
+2023-08-23 01:00:09,705 p=10577 u=root n=ansible | ok: [10.71.71.111]
+2023-08-23 01:00:09,853 p=10577 u=root n=ansible | ok: [10.71.71.214]
+2023-08-23 01:00:09,863 p=10577 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************
+2023-08-23 01:00:09,982 p=10577 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-23 01:00:09,987 p=10577 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-23 01:00:09,999 p=10577 u=root n=ansible | skipping: [10.71.71.111]
+2023-08-23 01:00:10,012 p=10577 u=root n=ansible | skipping: [10.71.71.115]
+2023-08-23 01:00:11,527 p=10577 u=root n=ansible | changed: [10.71.71.134]
+2023-08-23 01:00:11,544 p=10577 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-23 01:00:11,544 p=10577 u=root n=ansible | 10.71.71.111               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-23 01:00:11,544 p=10577 u=root n=ansible | 10.71.71.115               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-23 01:00:11,544 p=10577 u=root n=ansible | 10.71.71.134               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-23 01:00:11,544 p=10577 u=root n=ansible | 10.71.71.168               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-23 01:00:11,544 p=10577 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-24 01:00:02,075 p=13073 u=root n=ansible | PLAY [Update Servers] **********************************************************
+2023-08-24 01:00:02,085 p=13073 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-24 01:00:03,554 p=13073 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2023-08-24 01:00:03,554 p=13073 u=root n=ansible | ok: [10.71.71.134]
+2023-08-24 01:00:03,810 p=13073 u=root n=ansible | ok: [10.71.71.111]
+2023-08-24 01:00:03,952 p=13073 u=root n=ansible | ok: [10.71.71.115]
+2023-08-24 01:00:03,997 p=13073 u=root n=ansible | ok: [10.71.71.168]
+2023-08-24 01:00:04,001 p=13073 u=root n=ansible | ok: [10.71.71.214]
+2023-08-24 01:00:04,570 p=13073 u=root n=ansible | ok: [10.71.71.172]
+2023-08-24 01:00:04,582 p=13073 u=root n=ansible | TASK [Gather facts] ************************************************************
+2023-08-24 01:00:05,871 p=13073 u=root n=ansible | ok: [10.71.71.134]
+2023-08-24 01:00:06,024 p=13073 u=root n=ansible | ok: [10.71.71.115]
+2023-08-24 01:00:06,081 p=13073 u=root n=ansible | ok: [10.71.71.168]
+2023-08-24 01:00:06,105 p=13073 u=root n=ansible | ok: [10.71.71.214]
+2023-08-24 01:00:06,151 p=13073 u=root n=ansible | ok: [10.71.71.111]
+2023-08-24 01:00:06,457 p=13073 u=root n=ansible | ok: [10.71.71.172]
+2023-08-24 01:00:06,464 p=13073 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-24 01:00:06,731 p=13073 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-24 01:00:08,825 p=13073 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-24 01:00:08,825 p=13073 u=root n=ansible | ok: [10.71.71.115]
+2023-08-24 01:00:09,178 p=13073 u=root n=ansible | ok: [10.71.71.168]
+2023-08-24 01:00:09,472 p=13073 u=root n=ansible | ok: [10.71.71.214]
+2023-08-24 01:00:09,573 p=13073 u=root n=ansible | ok: [10.71.71.111]
+2023-08-24 01:00:21,085 p=13073 u=root n=ansible | ok: [10.71.71.172]
+2023-08-24 01:00:21,091 p=13073 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************
+2023-08-24 01:00:21,210 p=13073 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-24 01:00:21,235 p=13073 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-24 01:00:21,248 p=13073 u=root n=ansible | skipping: [10.71.71.111]
+2023-08-24 01:00:21,256 p=13073 u=root n=ansible | skipping: [10.71.71.115]
+2023-08-24 01:00:21,293 p=13073 u=root n=ansible | skipping: [10.71.71.172]
+2023-08-24 01:00:22,801 p=13073 u=root n=ansible | changed: [10.71.71.134]
+2023-08-24 01:00:22,817 p=13073 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-24 01:00:22,818 p=13073 u=root n=ansible | 10.71.71.111               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-24 01:00:22,818 p=13073 u=root n=ansible | 10.71.71.115               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-24 01:00:22,818 p=13073 u=root n=ansible | 10.71.71.134               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-24 01:00:22,818 p=13073 u=root n=ansible | 10.71.71.168               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-24 01:00:22,818 p=13073 u=root n=ansible | 10.71.71.172               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-24 01:00:22,818 p=13073 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-25 01:00:02,597 p=1557 u=root n=ansible | PLAY [Update Servers] **********************************************************
+2023-08-25 01:00:02,605 p=1557 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-25 01:00:04,244 p=1557 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2023-08-25 01:00:04,244 p=1557 u=root n=ansible | ok: [10.71.71.134]
+2023-08-25 01:00:04,401 p=1557 u=root n=ansible | ok: [10.71.71.214]
+2023-08-25 01:00:04,607 p=1557 u=root n=ansible | ok: [10.71.71.111]
+2023-08-25 01:00:04,609 p=1557 u=root n=ansible | ok: [10.71.71.115]
+2023-08-25 01:00:04,612 p=1557 u=root n=ansible | ok: [10.71.71.168]
+2023-08-25 01:00:05,152 p=1557 u=root n=ansible | ok: [10.71.71.172]
+2023-08-25 01:00:05,165 p=1557 u=root n=ansible | TASK [Gather facts] ************************************************************
+2023-08-25 01:00:06,522 p=1557 u=root n=ansible | ok: [10.71.71.214]
+2023-08-25 01:00:06,649 p=1557 u=root n=ansible | ok: [10.71.71.115]
+2023-08-25 01:00:06,652 p=1557 u=root n=ansible | ok: [10.71.71.134]
+2023-08-25 01:00:06,660 p=1557 u=root n=ansible | ok: [10.71.71.111]
+2023-08-25 01:00:06,758 p=1557 u=root n=ansible | ok: [10.71.71.168]
+2023-08-25 01:00:07,153 p=1557 u=root n=ansible | ok: [10.71.71.172]
+2023-08-25 01:00:07,160 p=1557 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-25 01:00:07,402 p=1557 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-25 01:00:12,058 p=1557 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-25 01:00:12,058 p=1557 u=root n=ansible | ok: [10.71.71.214]
+2023-08-25 01:00:12,261 p=1557 u=root n=ansible | ok: [10.71.71.168]
+2023-08-25 01:00:13,361 p=1557 u=root n=ansible | ok: [10.71.71.111]
+2023-08-25 01:00:14,064 p=1557 u=root n=ansible | ok: [10.71.71.115]
+2023-08-25 01:00:17,748 p=1557 u=root n=ansible | ok: [10.71.71.172]
+2023-08-25 01:00:17,755 p=1557 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************
+2023-08-25 01:00:17,858 p=1557 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-25 01:00:17,900 p=1557 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-25 01:00:17,909 p=1557 u=root n=ansible | skipping: [10.71.71.111]
+2023-08-25 01:00:17,923 p=1557 u=root n=ansible | skipping: [10.71.71.115]
+2023-08-25 01:00:17,952 p=1557 u=root n=ansible | skipping: [10.71.71.172]
+2023-08-25 01:00:19,525 p=1557 u=root n=ansible | changed: [10.71.71.134]
+2023-08-25 01:00:19,542 p=1557 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-25 01:00:19,542 p=1557 u=root n=ansible | 10.71.71.111               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-25 01:00:19,542 p=1557 u=root n=ansible | 10.71.71.115               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-25 01:00:19,542 p=1557 u=root n=ansible | 10.71.71.134               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-25 01:00:19,542 p=1557 u=root n=ansible | 10.71.71.168               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-25 01:00:19,542 p=1557 u=root n=ansible | 10.71.71.172               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-25 01:00:19,542 p=1557 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-26 01:00:02,279 p=2548 u=root n=ansible | PLAY [Update Servers] **********************************************************
+2023-08-26 01:00:02,287 p=2548 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-26 01:00:04,000 p=2548 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2023-08-26 01:00:04,000 p=2548 u=root n=ansible | ok: [10.71.71.134]
+2023-08-26 01:00:04,136 p=2548 u=root n=ansible | ok: [10.71.71.214]
+2023-08-26 01:00:04,208 p=2548 u=root n=ansible | ok: [10.71.71.111]
+2023-08-26 01:00:04,299 p=2548 u=root n=ansible | ok: [10.71.71.115]
+2023-08-26 01:00:04,375 p=2548 u=root n=ansible | ok: [10.71.71.168]
+2023-08-26 01:00:04,918 p=2548 u=root n=ansible | ok: [10.71.71.172]
+2023-08-26 01:00:04,933 p=2548 u=root n=ansible | TASK [Gather facts] ************************************************************
+2023-08-26 01:00:06,371 p=2548 u=root n=ansible | ok: [10.71.71.111]
+2023-08-26 01:00:06,373 p=2548 u=root n=ansible | ok: [10.71.71.134]
+2023-08-26 01:00:06,390 p=2548 u=root n=ansible | ok: [10.71.71.115]
+2023-08-26 01:00:06,414 p=2548 u=root n=ansible | ok: [10.71.71.168]
+2023-08-26 01:00:06,437 p=2548 u=root n=ansible | ok: [10.71.71.214]
+2023-08-26 01:00:06,954 p=2548 u=root n=ansible | ok: [10.71.71.172]
+2023-08-26 01:00:06,961 p=2548 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-26 01:00:07,209 p=2548 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-26 01:00:10,451 p=2548 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-26 01:00:10,451 p=2548 u=root n=ansible | ok: [10.71.71.168]
+2023-08-26 01:00:10,488 p=2548 u=root n=ansible | ok: [10.71.71.111]
+2023-08-26 01:00:10,495 p=2548 u=root n=ansible | ok: [10.71.71.115]
+2023-08-26 01:00:18,726 p=2548 u=root n=ansible | ok: [10.71.71.214]
+2023-08-26 01:00:19,013 p=2548 u=root n=ansible | ok: [10.71.71.172]
+2023-08-26 01:00:19,021 p=2548 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************
+2023-08-26 01:00:19,131 p=2548 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-26 01:00:19,177 p=2548 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-26 01:00:19,177 p=2548 u=root n=ansible | skipping: [10.71.71.111]
+2023-08-26 01:00:19,180 p=2548 u=root n=ansible | skipping: [10.71.71.115]
+2023-08-26 01:00:19,214 p=2548 u=root n=ansible | skipping: [10.71.71.172]
+2023-08-26 01:00:20,318 p=2548 u=root n=ansible | changed: [10.71.71.134]
+2023-08-26 01:00:20,335 p=2548 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-26 01:00:20,335 p=2548 u=root n=ansible | 10.71.71.111               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-26 01:00:20,335 p=2548 u=root n=ansible | 10.71.71.115               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-26 01:00:20,335 p=2548 u=root n=ansible | 10.71.71.134               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-26 01:00:20,335 p=2548 u=root n=ansible | 10.71.71.168               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-26 01:00:20,335 p=2548 u=root n=ansible | 10.71.71.172               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-26 01:00:20,335 p=2548 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-27 01:00:02,387 p=3510 u=root n=ansible | PLAY [Update Servers] **********************************************************
+2023-08-27 01:00:02,394 p=3510 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-27 01:00:04,164 p=3510 u=root n=ansible | ok: [10.71.71.111]
+2023-08-27 01:00:04,221 p=3510 u=root n=ansible | ok: [10.71.71.115]
+2023-08-27 01:00:04,276 p=3510 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2023-08-27 01:00:04,277 p=3510 u=root n=ansible | ok: [10.71.71.134]
+2023-08-27 01:00:04,283 p=3510 u=root n=ansible | ok: [10.71.71.214]
+2023-08-27 01:00:04,323 p=3510 u=root n=ansible | ok: [10.71.71.168]
+2023-08-27 01:00:05,113 p=3510 u=root n=ansible | ok: [10.71.71.172]
+2023-08-27 01:00:05,126 p=3510 u=root n=ansible | TASK [Gather facts] ************************************************************
+2023-08-27 01:00:06,579 p=3510 u=root n=ansible | ok: [10.71.71.134]
+2023-08-27 01:00:06,582 p=3510 u=root n=ansible | ok: [10.71.71.214]
+2023-08-27 01:00:06,584 p=3510 u=root n=ansible | ok: [10.71.71.111]
+2023-08-27 01:00:06,625 p=3510 u=root n=ansible | ok: [10.71.71.115]
+2023-08-27 01:00:06,695 p=3510 u=root n=ansible | ok: [10.71.71.168]
+2023-08-27 01:00:07,170 p=3510 u=root n=ansible | ok: [10.71.71.172]
+2023-08-27 01:00:07,177 p=3510 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-27 01:00:07,442 p=3510 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-27 01:00:10,462 p=3510 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-27 01:00:10,462 p=3510 u=root n=ansible | ok: [10.71.71.111]
+2023-08-27 01:00:10,889 p=3510 u=root n=ansible | ok: [10.71.71.115]
+2023-08-27 01:00:10,961 p=3510 u=root n=ansible | ok: [10.71.71.168]
+2023-08-27 01:00:12,255 p=3510 u=root n=ansible | ok: [10.71.71.172]
+2023-08-27 01:00:12,414 p=3510 u=root n=ansible | ok: [10.71.71.214]
+2023-08-27 01:00:12,426 p=3510 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************
+2023-08-27 01:00:12,574 p=3510 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-27 01:00:12,574 p=3510 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-27 01:00:12,574 p=3510 u=root n=ansible | skipping: [10.71.71.111]
+2023-08-27 01:00:12,584 p=3510 u=root n=ansible | skipping: [10.71.71.115]
+2023-08-27 01:00:12,614 p=3510 u=root n=ansible | skipping: [10.71.71.172]
+2023-08-27 01:00:16,375 p=3510 u=root n=ansible | changed: [10.71.71.134]
+2023-08-27 01:00:16,391 p=3510 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-27 01:00:16,391 p=3510 u=root n=ansible | 10.71.71.111               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-27 01:00:16,391 p=3510 u=root n=ansible | 10.71.71.115               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-27 01:00:16,391 p=3510 u=root n=ansible | 10.71.71.134               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-27 01:00:16,391 p=3510 u=root n=ansible | 10.71.71.168               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-27 01:00:16,391 p=3510 u=root n=ansible | 10.71.71.172               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-27 01:00:16,391 p=3510 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-28 01:00:02,277 p=4566 u=root n=ansible | PLAY [Update Servers] **********************************************************
+2023-08-28 01:00:02,283 p=4566 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-28 01:00:04,054 p=4566 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2023-08-28 01:00:04,054 p=4566 u=root n=ansible | ok: [10.71.71.134]
+2023-08-28 01:00:04,060 p=4566 u=root n=ansible | ok: [10.71.71.214]
+2023-08-28 01:00:04,107 p=4566 u=root n=ansible | ok: [10.71.71.115]
+2023-08-28 01:00:04,109 p=4566 u=root n=ansible | ok: [10.71.71.111]
+2023-08-28 01:00:04,159 p=4566 u=root n=ansible | ok: [10.71.71.168]
+2023-08-28 01:00:05,060 p=4566 u=root n=ansible | ok: [10.71.71.172]
+2023-08-28 01:00:05,076 p=4566 u=root n=ansible | TASK [Gather facts] ************************************************************
+2023-08-28 01:00:06,332 p=4566 u=root n=ansible | ok: [10.71.71.134]
+2023-08-28 01:00:06,514 p=4566 u=root n=ansible | ok: [10.71.71.115]
+2023-08-28 01:00:06,574 p=4566 u=root n=ansible | ok: [10.71.71.168]
+2023-08-28 01:00:06,596 p=4566 u=root n=ansible | ok: [10.71.71.214]
+2023-08-28 01:00:06,615 p=4566 u=root n=ansible | ok: [10.71.71.111]
+2023-08-28 01:00:06,909 p=4566 u=root n=ansible | ok: [10.71.71.172]
+2023-08-28 01:00:06,916 p=4566 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-28 01:00:07,165 p=4566 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-28 01:00:10,874 p=4566 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-28 01:00:10,877 p=4566 u=root n=ansible | ok: [10.71.71.111]
+2023-08-28 01:00:11,080 p=4566 u=root n=ansible | ok: [10.71.71.115]
+2023-08-28 01:00:11,508 p=4566 u=root n=ansible | ok: [10.71.71.214]
+2023-08-28 01:00:11,901 p=4566 u=root n=ansible | ok: [10.71.71.172]
+2023-08-28 01:00:14,632 p=4566 u=root n=ansible | changed: [10.71.71.168]
+2023-08-28 01:00:14,642 p=4566 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************
+2023-08-28 01:00:14,787 p=4566 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-28 01:00:14,788 p=4566 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-28 01:00:14,788 p=4566 u=root n=ansible | skipping: [10.71.71.111]
+2023-08-28 01:00:14,807 p=4566 u=root n=ansible | skipping: [10.71.71.115]
+2023-08-28 01:00:14,836 p=4566 u=root n=ansible | skipping: [10.71.71.172]
+2023-08-28 01:00:16,173 p=4566 u=root n=ansible | changed: [10.71.71.134]
+2023-08-28 01:00:16,189 p=4566 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-28 01:00:16,189 p=4566 u=root n=ansible | 10.71.71.111               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-28 01:00:16,189 p=4566 u=root n=ansible | 10.71.71.115               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-28 01:00:16,189 p=4566 u=root n=ansible | 10.71.71.134               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-28 01:00:16,189 p=4566 u=root n=ansible | 10.71.71.168               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-28 01:00:16,189 p=4566 u=root n=ansible | 10.71.71.172               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-28 01:00:16,189 p=4566 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-29 01:00:01,996 p=1212 u=root n=ansible | PLAY [Update Servers] **********************************************************
+2023-08-29 01:00:02,008 p=1212 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-29 01:00:03,648 p=1212 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2023-08-29 01:00:03,648 p=1212 u=root n=ansible | ok: [10.71.71.134]
+2023-08-29 01:00:03,739 p=1212 u=root n=ansible | ok: [10.71.71.214]
+2023-08-29 01:00:03,762 p=1212 u=root n=ansible | fatal: [10.71.71.131]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.131 port 22: Connection refused", "unreachable": true}
+2023-08-29 01:00:03,998 p=1212 u=root n=ansible | ok: [10.71.71.168]
+2023-08-29 01:00:04,072 p=1212 u=root n=ansible | ok: [10.71.71.115]
+2023-08-29 01:00:04,105 p=1212 u=root n=ansible | ok: [10.71.71.111]
+2023-08-29 01:00:04,621 p=1212 u=root n=ansible | ok: [10.71.71.172]
+2023-08-29 01:00:04,634 p=1212 u=root n=ansible | TASK [Gather facts] ************************************************************
+2023-08-29 01:00:06,004 p=1212 u=root n=ansible | ok: [10.71.71.115]
+2023-08-29 01:00:06,024 p=1212 u=root n=ansible | ok: [10.71.71.134]
+2023-08-29 01:00:06,091 p=1212 u=root n=ansible | ok: [10.71.71.214]
+2023-08-29 01:00:06,102 p=1212 u=root n=ansible | ok: [10.71.71.111]
+2023-08-29 01:00:06,131 p=1212 u=root n=ansible | ok: [10.71.71.168]
+2023-08-29 01:00:06,628 p=1212 u=root n=ansible | ok: [10.71.71.172]
+2023-08-29 01:00:06,635 p=1212 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-29 01:00:06,873 p=1212 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-29 01:00:11,416 p=1212 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-29 01:00:11,416 p=1212 u=root n=ansible | ok: [10.71.71.115]
+2023-08-29 01:00:11,522 p=1212 u=root n=ansible | ok: [10.71.71.111]
+2023-08-29 01:00:11,978 p=1212 u=root n=ansible | ok: [10.71.71.214]
+2023-08-29 01:00:12,644 p=1212 u=root n=ansible | ok: [10.71.71.168]
+2023-08-29 01:00:19,088 p=1212 u=root n=ansible | ok: [10.71.71.172]
+2023-08-29 01:00:19,095 p=1212 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************
+2023-08-29 01:00:19,211 p=1212 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-29 01:00:19,247 p=1212 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-29 01:00:19,248 p=1212 u=root n=ansible | skipping: [10.71.71.111]
+2023-08-29 01:00:19,263 p=1212 u=root n=ansible | skipping: [10.71.71.115]
+2023-08-29 01:00:19,297 p=1212 u=root n=ansible | skipping: [10.71.71.172]
+2023-08-29 01:00:22,487 p=1212 u=root n=ansible | changed: [10.71.71.134]
+2023-08-29 01:00:22,504 p=1212 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-29 01:00:22,504 p=1212 u=root n=ansible | 10.71.71.111               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-29 01:00:22,504 p=1212 u=root n=ansible | 10.71.71.115               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-29 01:00:22,504 p=1212 u=root n=ansible | 10.71.71.131               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-29 01:00:22,504 p=1212 u=root n=ansible | 10.71.71.134               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-29 01:00:22,504 p=1212 u=root n=ansible | 10.71.71.168               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-29 01:00:22,504 p=1212 u=root n=ansible | 10.71.71.172               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-29 01:00:22,504 p=1212 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-30 01:00:02,152 p=2672 u=root n=ansible | PLAY [Update Servers] **********************************************************
+2023-08-30 01:00:02,158 p=2672 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2023-08-30 01:00:03,895 p=2672 u=root n=ansible | [WARNING]: Platform linux on host 10.71.71.134 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2023-08-30 01:00:03,896 p=2672 u=root n=ansible | ok: [10.71.71.134]
+2023-08-30 01:00:03,930 p=2672 u=root n=ansible | ok: [10.71.71.111]
+2023-08-30 01:00:03,974 p=2672 u=root n=ansible | fatal: [10.71.71.131]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.71.71.131 port 22: Connection refused", "unreachable": true}
+2023-08-30 01:00:03,993 p=2672 u=root n=ansible | ok: [10.71.71.115]
+2023-08-30 01:00:04,115 p=2672 u=root n=ansible | ok: [10.71.71.214]
+2023-08-30 01:00:04,155 p=2672 u=root n=ansible | ok: [10.71.71.168]
+2023-08-30 01:00:04,793 p=2672 u=root n=ansible | ok: [10.71.71.172]
+2023-08-30 01:00:04,805 p=2672 u=root n=ansible | TASK [Gather facts] ************************************************************
+2023-08-30 01:00:06,061 p=2672 u=root n=ansible | ok: [10.71.71.134]
+2023-08-30 01:00:06,281 p=2672 u=root n=ansible | ok: [10.71.71.115]
+2023-08-30 01:00:06,309 p=2672 u=root n=ansible | ok: [10.71.71.214]
+2023-08-30 01:00:06,362 p=2672 u=root n=ansible | ok: [10.71.71.111]
+2023-08-30 01:00:06,370 p=2672 u=root n=ansible | ok: [10.71.71.168]
+2023-08-30 01:00:06,639 p=2672 u=root n=ansible | ok: [10.71.71.172]
+2023-08-30 01:00:06,646 p=2672 u=root n=ansible | TASK [Update apt cache and upgrade packages (Ubuntu/Debian)] *******************
+2023-08-30 01:00:06,903 p=2672 u=root n=ansible | skipping: [10.71.71.134]
+2023-08-30 01:00:09,311 p=2672 u=root n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2023-08-30 01:00:09,311 p=2672 u=root n=ansible | ok: [10.71.71.111]
+2023-08-30 01:00:10,161 p=2672 u=root n=ansible | ok: [10.71.71.115]
+2023-08-30 01:00:10,701 p=2672 u=root n=ansible | ok: [10.71.71.168]
+2023-08-30 01:00:10,843 p=2672 u=root n=ansible | ok: [10.71.71.214]
+2023-08-30 01:00:12,123 p=2672 u=root n=ansible | ok: [10.71.71.172]
+2023-08-30 01:00:12,132 p=2672 u=root n=ansible | TASK [Update packages (Alpine)] ************************************************
+2023-08-30 01:00:12,258 p=2672 u=root n=ansible | skipping: [10.71.71.168]
+2023-08-30 01:00:12,286 p=2672 u=root n=ansible | skipping: [10.71.71.214]
+2023-08-30 01:00:12,303 p=2672 u=root n=ansible | skipping: [10.71.71.111]
+2023-08-30 01:00:12,306 p=2672 u=root n=ansible | skipping: [10.71.71.115]
+2023-08-30 01:00:12,328 p=2672 u=root n=ansible | skipping: [10.71.71.172]
+2023-08-30 01:00:13,759 p=2672 u=root n=ansible | changed: [10.71.71.134]
+2023-08-30 01:00:13,775 p=2672 u=root n=ansible | PLAY RECAP *********************************************************************
+2023-08-30 01:00:13,776 p=2672 u=root n=ansible | 10.71.71.111               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-30 01:00:13,776 p=2672 u=root n=ansible | 10.71.71.115               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-30 01:00:13,776 p=2672 u=root n=ansible | 10.71.71.131               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-30 01:00:13,776 p=2672 u=root n=ansible | 10.71.71.134               : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-30 01:00:13,776 p=2672 u=root n=ansible | 10.71.71.168               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-30 01:00:13,776 p=2672 u=root n=ansible | 10.71.71.172               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-30 01:00:13,776 p=2672 u=root n=ansible | 10.71.71.214               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   

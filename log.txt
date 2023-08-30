@@ -1,0 +1,56 @@
+
+PLAY [website] *****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [10.71.71.111]
+
+TASK [Fetch the latest code from the repository] *******************************
+changed: [10.71.71.111]
+
+TASK [Install any new dependencies] ********************************************
+ok: [10.71.71.111]
+
+TASK [Restart the Node.js application (using systemctl)] ***********************
+changed: [10.71.71.111]
+
+PLAY RECAP *********************************************************************
+10.71.71.111               : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+----- Run started at Wed 30 Aug 2023 01:02:56 PM UTC -----
+
+PLAY [website] *****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [10.71.71.111]
+
+TASK [Fetch the latest code from the repository] *******************************
+changed: [10.71.71.111]
+
+TASK [Install any new dependencies] ********************************************
+ok: [10.71.71.111]
+
+TASK [Restart the Node.js application (using systemctl)] ***********************
+changed: [10.71.71.111]
+
+PLAY RECAP *********************************************************************
+10.71.71.111               : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+----- Run started at Wed 30 Aug 2023 01:06:45 PM UTC -----
+
+PLAY [website] *****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [10.71.71.111]
+
+TASK [Fetch the latest code from the repository] *******************************
+changed: [10.71.71.111]
+
+TASK [Install any new dependencies] ********************************************
+ok: [10.71.71.111]
+
+TASK [Restart the Node.js application (using systemctl)] ***********************
+changed: [10.71.71.111]
+
+PLAY RECAP *********************************************************************
+10.71.71.111               : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
